@@ -1,15 +1,17 @@
 # Hoops HQ
 
-Here is code for a website that allows users to play various games about the NBA in HTML.
+Here is code for a website that allows users to browse an NBA-themed website that includes:
 - trivia
 - immaculate grid
 - stat of the day
+- voting polls
+- stats
 
 I plan on adding the following
-- quizzes
-- voting polls
+- daily pick 'em (coming soon)
+
 
 # Issues
 
-- unresponsive immaculate grid
-  - can search for players, but can not respond to a correct answer just yet
+- daily pick 'em
+  - is unfinished; will re-direct to a 404 error page for now

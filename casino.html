@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pick 'Em!</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+
+<!--loading animation-->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<!--nav bar-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="hoops-hq-logos/logo-nav-bar.png" height="50px" width="120px" alt="hoops-hq-logo"></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav custom_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="immaculate-grid.html">Immaculate Grid</a></li>
+          <li><a href="trivia.html">Trivia!</a></li>
+          <li><a href="voting-poll.html">Voting Poll!</a></li>
+          <li class="dropdown"><a href="stat-of-the-day-home.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stat of the Day</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="stat-of-the-day-home.html">12/2/23</a></li>
+              <li><a href="previous-day.html">12/1/23</a></li>
+              <li><a href="2-days-prior.html">11/30/23</a></li>
+            </ul>
+          </li>
+          <li><a href="leaders.html">League Leaders</a></li>
+          <li><a href="schedule.html">Daily Schedule</a></li>
+          <li class="active"><a href="404.html">Pick 'Em!</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
+        <form action="#">
+          <input class="search_bar" type="text" placeholder="Search here">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--css-->
+<style>
+        body {
+            font-family: 'Allerta',Helvetica,Arial,sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .game {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bet-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bet-input {
+            margin-bottom: 10px;
+        }
+
+        .bet-button {
+            padding: 10px 20px;
+            background-color: #12a3df;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+</style>
+
+<br>
+<br>
+<br>
+
+<!--main interface-->
+<body>
+    <div class="game">
+        <h2>Game 1</h2>
+        <div class="bet-form">
+            <label for="betAmount1">Enter your bet amount:</label>
+            <input type="number" id="betAmount1" class="bet-input" />
+            <button onclick="placeBet(1)" class="bet-button">Place Bet</button>
+        </div>
+    </div>
+
+    <div class="game">
+        <h2>Game 2</h2>
+        <div class="bet-form">
+            <label for="betAmount2">Enter your bet amount:</label>
+            <input type="number" id="betAmount2" class="bet-input" />
+            <button onclick="placeBet(2)" class="bet-button">Place Bet</button>
+        </div>
+    </div>
+
+    <h2>Your Bets</h2>
+    <ul id="userBets">
+      <!-- Display user's bets dynamically using JavaScript -->
+    </ul>
+
+    <!-- Repeat the above structure for the other games -->
+</body>
+
+<!--js for wager display-->
+    <script>
+        function placeBet(gameNumber) {
+            // Add logic to handle the bet placement
+            // You would typically communicate with a backend server to process the bet
+            alert("Bet placed on Game " + gameNumber);
+        }
+    </script>
+
+<!--animations-->
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/custom.js"></script>
+
+
+</html>

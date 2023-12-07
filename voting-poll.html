@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NBA History Poll</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body></body>
+
+<!--loading animation-->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<!--nav bar-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="hoops-hq-logos/logo-nav-bar.png" height="50px" width="120px" alt="hoops-hq-logo"></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav custom_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="immaculate-grid.html">Immaculate Grid</a></li>
+          <li><a href="trivia.html">Trivia!</a></li>
+          <li class="active"><a href="voting-poll.html">Voting Poll!</a></li>
+          <li class="dropdown"><a href="stat-of-the-day-home.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stat of the Day</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="stat-of-the-day-home.html">12/2/23</a></li>
+              <li><a href="previous-day.html">12/1/23</a></li>
+              <li><a href="2-days-prior.html">11/30/23</a></li>
+            </ul>
+          </li>
+          <li><a href="leaders.html">League Leaders</a></li>
+          <li><a href="schedule.html">Daily Schedule</a></li>
+          <li><a href="404.html">Pick 'Em!</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
+        <form action="#">
+          <input class="search_bar" type="text" placeholder="Search here">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!--css (poll containers)-->
+<style>
+    body {
+        font-family: 'Allerta',Helvetica,Arial,sans-serif;
+        text-align: center;
+    }
+
+    .poll-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .option {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #result {
+        margin-top: 20px;
+    }
+</style>
+
+<br>
+<br>
+<br>
+
+
+<!--intro-->
+<body>
+<h2>
+  Welcome our the NBA History Poll!
+</h2>
+
+<br>              
+
+<h4>
+  We invite you to share your opinions on various aspects of NBA history! Your votes contribute to a collective perspective on significant 
+  moments, players, and events that have shaped the rich history of the National Basketball Association.              
+</h4>
+
+<br>
+
+<h2>
+  How It Works:
+</h2>
+
+<br>
+
+<h4>
+  Choose Your Option: Review the provided options for each poll question.
+  <br>
+  <br>
+  Submit Your Vote: Click on the option that aligns with your opinion, then hit the "Submit Vote" button.
+  <br>
+  <br>
+  See the Results: After submitting your vote, view the real-time results to see how your opinion compares to others.
+</h4>
+</body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--polls-->
+<body>
+<div class="poll-container">
+    <img src="voting-polls/kevin-durant-gs.jpg" height="200px" width="300px">
+    <h3>Do you support Kevin Durant's decision to go to Golden State?</h3>
+    <br>
+    <div class="option">
+        <input type="radio" name="vote" id="option1" value="Option 1">
+        <label for="option1">Yes, I do</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 2">
+        <label for="option2">I see why he did it, but I don't support it</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 3">
+        <label for="option2">No, I don't support it at all</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 4">
+        <label for="option2">I'm neither here nor there</label>
+    </div>
+
+    <button onclick="submitVote()">Submit Vote</button>
+    <div id="result"></div>
+</div>
+
+
+<div class="poll-container">
+    <img src="voting-polls/zion-and-ingram.webp" height="200px" width="350px">
+    <h3>Are you counting on the Pelicans to stay healthy this year?</h3>
+    <br>
+    <div class="option">
+        <input type="radio" name="vote" id="option1" value="Option 1">
+        <label for="option1">Yes, I am</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 2">
+        <label for="option2">No, I am not</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 3">
+        <label for="option2">No comment</label>
+    </div>
+
+    <button onclick="submitVote()">Submit Vote</button>
+    <div id="result"></div>
+</div>
+
+<div class="poll-container">
+    <img src="voting-polls/jordan-and-lebron.jpg" height="200px" width="350px">
+    <h3>Who is your GOAT?</h3>
+    <br>
+    <div class="option">
+        <input type="radio" name="vote" id="option1" value="Option 1">
+        <label for="option1">Michael Jordan is the GOAT</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 2">
+        <label for="option2">LeBron James is the GOAT</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 3">
+        <label for="option2">Neither Jordan nor LeBron is the GOAT</label>
+    </div>
+
+    <button onclick="submitVote()">Submit Vote</button>
+    <div id="result"></div>
+</div>
+
+<div class="poll-container">
+    <img src="voting-polls/jordan-snatchback.jpg" height="200px" width="350px">
+    <h3>Was Jordan's snatchback against Russell in the '98 Finals a push-off?</h3>
+    <br>
+    <div class="option">
+        <input type="radio" name="vote" id="option1" value="Option 1">
+        <label for="option1">Yes</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 2">
+        <label for="option2">No</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 3">
+        <label for="option2">I can't tell</label>
+    </div>
+
+    <button onclick="submitVote()">Submit Vote</button>
+    <div id="result"></div>
+</div>
+
+<div class="poll-container">
+    <img src="voting-polls/new-look-clips.avif" height="200px" width="400px">
+    <h3>Are the Clippers a contender?</h3>
+    <br>
+    <div class="option">
+        <input type="radio" name="vote" id="option1" value="Option 1">
+        <label for="option1">Yes</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 2">
+        <label for="option2">No</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 3">
+        <label for="option2">Too early to tell</label>
+    </div>
+
+    <div class="option">
+        <input type="radio" name="vote" id="option2" value="Option 4">
+        <label for="option2">I'm not sure</label>
+    </div>
+
+    <button onclick="submitVote()">Submit Vote</button>
+    <div id="result"></div>
+</div>
+</body>
+
+<!--js for vote submission-->
+<script>
+    function submitVote() {
+        const selectedOption = document.querySelector('input[name="vote"]:checked');
+
+        if (selectedOption) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `Voted for: ${selectedOption.value}`;
+        } else {
+            alert('Please select an option before submitting your vote.');
+        }
+    }
+</script>
+
+<!--animations-->
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/custom.js"></script>
+</body>

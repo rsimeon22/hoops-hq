@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add your CSS styles here */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px; /* Adjust the gap as needed */
+      text-align: center;
+    }
+
+    .button {
+      width: 100px;
+      height: 100px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: white;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+    }
+
+    .button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8, .button9, .button10, .button11, .button12, .button13, .button14, .button15, .button16 {
+      width: 100px;
+      height: 100px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: white;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+    }
+
+    .green {
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid" id="grid">
+    <!-- Create a 4x4 grid of buttons -->
+    <!-- You can customize the onclick attribute to perform specific actions -->
+    <button class="button1"></button>
+    <button class="button2" onclick="checkInput(1)"><img src="immaculate-grid/76ers-ig.png" height="60px" width="80px" alt="2png"></button>
+    <button class="button3" onclick="checkInput(2)"><img src="immaculate-grid/jazz-ig.png" height="60px" width="80px" alt="3png"></button>
+    <button class="button4" onclick="checkInput(3)"><img src="immaculate-grid/magic-ig.png" height="60px" width="80px" alt="4png"></button>
+    <button class="button5" onclick="checkInput(4)"><img src="immaculate-grid/wizards-ig.png" height="60px" width="80px" alt="5png"></button>
+    <button class="button6" onclick="checkInput(6)"></button>
+    <button class="button7" onclick="checkInput(7)"></button>
+    <button class="button8" onclick="checkInput(8)"></button>
+    <button class="button9" onclick="checkInput(9)"><img src="immaculate-grid/raptors-ig.png" height="60px" width="80px" alt="9png"></button>
+    <button class="button10" onclick="checkInput(10)"></button>
+    <button class="button11" onclick="checkInput(11)"></button>
+    <button class="button12" onclick="checkInput(12)"></button>
+    <button class="button13" onclick="checkInput(13)"><img src="immaculate-grid/kings-ig.png" height="60px" width="80px" alt="13png"></button>
+    <button class="button14" onclick="checkInput(14)"></button>
+    <button class="button15" onclick="checkInput(15)"></button>
+    <button class="button16" onclick="checkInput(16)"></button>
+  </div>
+
+  <script>
+    function checkInput(buttonNumber) {
+      const userInput = prompt("Enter your input:");
+      //const buttonNumber = document.querySelector('.button' + buttonNumber);
+
+      // Define the conditions for each button
+      let isValidInput = false;
+
+
+      switch (buttonNumber) {
+        case 6:
+          isValidInput = buttonConditions && (userInput === 'ron anderson' || userInput === 'isaac austin' /* add more conditions */);
+          break;
+        case 7:
+          isValidInput = buttonConditions && (userInput === 'trevor booker' || userInput === 'calvin booth'/* add more conditions */);
+          break;
+        case 8:
+          isValidInput = buttonConditions && (userInput === 'ron anderson' || userInput === 'isaac austin' /* add more conditions */);
+          break;
+        case 10:
+          isValidInput = buttonConditions && (userInput === 'trevor booker' || userInput === 'calvin booth'/* add more conditions */);
+          break;
+        case 11:
+          isValidInput = buttonConditions && (userInput === 'ron anderson' || userInput === 'isaac austin' /* add more conditions */);
+          break;
+        case 12:
+          isValidInput = buttonConditions && (userInput === 'trevor booker' || userInput === 'calvin booth'/* add more conditions */);
+          break;
+        case 14:
+          isValidInput = buttonConditions && (userInput === 'ron anderson' || userInput === 'isaac austin' /* add more conditions */);
+          break;
+        case 15:
+          isValidInput = buttonConditions && (userInput === 'trevor booker' || userInput === 'calvin booth'/* add more conditions */);
+          break;
+        case 16:
+          isValidInput = buttonConditions && (userInput === 'ron anderson' || userInput === 'isaac austin' /* add more conditions */);
+          break;
+        // Add cases for other buttons
+
+        default:
+          break;
+      }
+
+      // Update the button color or perform other actions based on isValidInput
+      const buttonElement = document.querySelector('.button' + buttonNumber);
+      if (isValidInput) {
+        // Set the button to green or perform other actions
+        buttonElement.style.backgroundColor = 'green';
+      } else {
+        // Set the button to another color or perform other actions
+        buttonElement.style.backgroundColor = 'red';
+      }
+    }
+  </script>
+
+</body>
+</html>

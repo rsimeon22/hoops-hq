@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>League Leaders!</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<!--loading animation-->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
+<!--nav bar-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="hoops-hq-logos/logo-nav-bar.png" height="50px" width="120px" alt="hoops-hq-logo"></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav custom_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="immaculate-grid.html">Immaculate Grid</a></li>
+          <li><a href="trivia.html">Trivia!</a></li>
+          <li><a href="voting-poll.html">Voting Poll!</a></li>
+          <li class="dropdown"><a href="stat-of-the-day-home.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stat of the Day</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="stat-of-the-day-home.html">12/2/23</a></li>
+              <li><a href="previous-day.html">12/1/23</a></li>
+              <li><a href="2-days-prior.html">11/30/23</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="leaders.html">League Leaders</a></li>
+          <li><a href="schedule.html">Daily Schedule</a></li>
+          <li><a href="404.html">Pick 'Em!</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
+        <form action="#">
+          <input class="search_bar" type="text" placeholder="Search here">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!--css-->
+<style>
+  table {
+  font-family: 'Allerta',Helvetica,Arial,sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  table tr:nth-child(even){background-color: #f2f2f2;}
+
+  table tr:hover {background-color: #ddd;}
+
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #12a3df;
+    color: white;
+  }
+</style>
+
+<br>
+<br>
+<br>
+
+
+<!--points per game-->
+<h1 text-align="center">Points Per Game</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Joel Embiid</td>
+      <td>32.0</td>
+    </tr>
+    <tr>
+      <td>Kevin Durant</td>
+      <td>31.3</td>
+    </tr>
+    <tr>
+      <td>Luka Doncic</td>
+      <td>31.1</td>
+    </tr>
+    <tr>
+      <td>Shai Gilgeous-Alexander</td>
+      <td>30.6</td>
+    </tr>
+    <tr>
+      <td>Giannis Antetokounmpo</td>
+      <td>29.8</td>
+    </tr>
+    <tr>
+      <td>Stephen Curry</td>
+      <td>29.5</td>
+    </tr>
+    <tr>
+      <td>Nikola Jokic</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <td>Jayson Tatum</td>
+      <td>27.7</td>
+    </tr>
+    <tr>
+      <td>Donavan Mitchell</td>
+      <td>27.6</td>
+    </tr>
+    <tr>
+      <td>Tyrese Maxey</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--rebounds per game-->
+<h1 text-align="center">Rebounds Per Game</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nikola Jokic</td>
+      <td>13.2</td>
+    </tr>
+    <tr>
+      <td>Anthony Davis</td>
+      <td>12.4</td>
+    </tr>
+    <tr>
+      <td>Domantas Sabonis</td>
+      <td>11.6</td>
+    </tr>
+    <tr>
+      <td>Rudy Gobert</td>
+      <td>11.6</td>
+    </tr>
+    <tr>
+      <td>Joel Embiid</td>
+      <td>11.2</td>
+    </tr>
+    <tr>
+      <td>Mitchell Robinson</td>
+      <td>11.1</td>
+    </tr>
+    <tr>
+      <td>Giannis Antetokounmpo</td>
+      <td>10.8</td>
+    </tr>
+    <tr>
+      <td>Deandre Ayton</td>
+      <td>10.8</td>
+    </tr>
+    <tr>
+      <td>Evan Mobley</td>
+      <td>10.7</td>
+    </tr>
+    <tr>
+      <td>Mark Williams</td>
+      <td>10.3</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--assists per game-->
+<h1 text-align="center">Assists Per Game</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tyrese Haliburton</td>
+      <td>11.8</td>
+    </tr>
+    <tr>
+      <td>Trae Young</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td>Nikola Jokic</td>
+      <td>9.2</td>
+    </tr>
+    <tr>
+      <td>Fred VanVleet</td>
+      <td>9.2</td>
+    </tr>
+    <tr>
+      <td>Lamelo Ball</td>
+      <td>8.2</td>
+    </tr>
+    <tr>
+      <td>Luka Doncic</td>
+      <td>7.9</td>
+    </tr>
+    <tr>
+      <td>Chris Paul</td>
+      <td>7.3</td>
+    </tr>
+    <tr>
+      <td>Cade Cunningham</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <td>Domantas Sabonis</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <td>Dennis Schroder</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--steals per game-->
+<h1 text-align="center">Steals Per Game</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shai Gilgeous-Alexander</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <td>Donavan Mitchell</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <td>Jalen Suggs</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <td>Dejounte Murray</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <td>Herbert Jones</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <td>Paul George</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <td>Kawhi Leonard</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <td>Scottie Barnes</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <td>James Harden</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <td>Trae Young</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x? Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--blocks per game-->
+<h1 text-align="center">Blocks Per Game</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Victor Wembanyama</td>
+      <td>2.7</td>
+    </tr>
+    <tr>
+      <td>Anthony Davis</td>
+      <td>2.7</td>
+    </tr>
+    <tr>
+      <td>Brook Lopez</td>
+      <td>2.7</td>
+    </tr>
+    <tr>
+      <td>Rudy Gobert</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <td>Myles Turner</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <td>Chet Holmgren</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <td>Daniel Gafford</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>Joel Embiid</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <td>Jaren Jackson Jr.</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <td>Evan Mobley</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--fg%-->
+<h1 text-align="center">Field Goal Percentage</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jakob Poeltl</td>
+      <td>.733</td>
+    </tr>
+    <tr>
+      <td>Jarett Allen</td>
+      <td>.676</td>
+    </tr>
+    <tr>
+      <td>Mark Williams</td>
+      <td>.652</td>
+    </tr>
+    <tr>
+      <td>Moritz Wagner</td>
+      <td>.632</td>
+    </tr>
+    <tr>
+      <td>Ivica Zubac</td>
+      <td>.611</td>
+    </tr>
+    <tr>
+      <td>Giannis Antetokounmpo</td>
+      <td>.601</td>
+    </tr>
+    <tr>
+      <td>Obi Toppin</td>
+      <td>.596</td>
+    </tr>
+    <tr>
+      <td>Jalen Johnson</td>
+      <td>.594</td>
+    </tr>
+    <tr>
+      <td>Clint Capela</td>
+      <td>.593</td>
+    </tr>
+    <tr>
+      <td>Deandre Ayton</td>
+      <td>.591</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--3pt%-->
+<h1 text-align="center">Three Point Percentage</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cason Wallace</td>
+      <td>.576</td>
+    </tr>
+    <tr>
+      <td>Nicolas Batum</td>
+      <td>.513</td>
+    </tr>
+    <tr>
+      <td>Kevin Durant</td>
+      <td>.493</td>
+    </tr>
+    <tr>
+      <td>Jalen Brunson</td>
+      <td>.480</td>
+    </tr>
+    <tr>
+      <td>Alex Caruso</td>
+      <td>.475</td>
+    </tr>
+    <tr>
+      <td>Grayson Allen</td>
+      <td>.475</td>
+    </tr>
+    <tr>
+      <td>Doug McDermott</td>
+      <td>.475</td>
+    </tr>
+    <tr>
+      <td>Matt Ryan</td>
+      <td>.471</td>
+    </tr>
+    <tr>
+      <td>Norman Powell</td>
+      <td>.465</td>
+    </tr>
+    <tr>
+      <td>Isaiah Joe</td>
+      <td>.463</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--VORP-->
+<h1 text-align="center">VORP (Value Over Replacement Player)</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nikola Jokic</td>
+      <td>2.7</td>
+    </tr>
+    <tr>
+      <td>Shai Gilgeous-Alexander</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <td>Joel Embiid</td>
+      <td>1.8</td>
+    </tr>
+    <tr>
+      <td>Tyrese Haliburton</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <td>LeBron James</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <td>Luka Doncic</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <td>Stephen Curry</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <td>Tyrese Maxey</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <td>Scottie Barnes</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <td>Giannis Antetokounmpo</td>
+      <td>1.2</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--eFG%-->
+<h1 text-align="center">Effective Field Goal Percentage</h1>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jakob Poeltl</td>
+      <td>.733</td>
+    </tr>
+    <tr>
+      <td>Jarrett Allen</td>
+      <td>.676</td>
+    </tr>
+    <tr>
+      <td>Moritz Wagner</td>
+      <td>.673</td>
+    </tr>
+    <tr>
+      <td>Obi Toppin</td>
+      <td>.658</td>
+    </tr>
+    <tr>
+      <td>Jalen Johnson</td>
+      <td>.654</td>
+    </tr>
+    <tr>
+      <td>Mark Williams</td>
+      <td>.652</td>
+    </tr>
+    <tr>
+      <td>Malik Beasley</td>
+      <td>.639</td>
+    </tr>
+    <tr>
+      <td>Tyrese Haliburton</td>
+      <td>.630</td>
+    </tr>
+    <tr>
+      <td>Grayson Allen</td>
+      <td>.630</td>
+    </tr>
+    <tr>
+      <td>Lebron James</td>
+      <td>.629</td>
+    </tr>
+    <tr>
+      <td>Want to see #11-#x?</td>
+      <td>Click here!</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--animations-->
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/custom.js"></script>

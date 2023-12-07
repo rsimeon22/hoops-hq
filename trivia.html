@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trivia!</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+ 
+<!--loading animation-->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
+<!--nav bar-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="hoops-hq-logos/logo-nav-bar.png" height="50px" width="120px" alt="hoops-hq-logo"></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav custom_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="immaculate-grid.html">Immaculate Grid</a></li>
+          <li class="active"><a href="trivia.html">Trivia!</a></li>
+          <li><a href="voting-poll.html">Voting Poll!</a></li>
+          <li class="dropdown"><a href="stat-of-the-day-home.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stat of the Day</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="stat-of-the-day-home.html">12/2/23</a></li>
+              <li><a href="previous-day.html">12/1/23</a></li>
+              <li><a href="2-days-prior.html">11/30/23</a></li>
+            </ul>
+          </li>
+          <li><a href="leaders.html">League Leaders</a></li>
+          <li><a href="schedule.html">Daily Schedule</a></li>
+          <li><a href="404.html">Pick 'Em!</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
+        <form action="#">
+          <input class="search_bar" type="text" placeholder="Search here">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--intro-->
+<section id="content">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+
+        <div style="background-color: lightgrey;
+        width: 700px, 50%;
+        border: 15px solid #12a3df;
+        padding: 50px;
+        margin: 20px;
+        font-size: 20px;
+        font-family:'Allerta',Helvetica,Arial,sans-serif">Are you a true basketball aficionado? Do you bleed your team's colors? Brace yourself
+         for an adrenaline-pumping journey through the heart of the NBA with our mind-boggling trivia 
+         challenges!
+        <br>
+        <br>
+        <br>
+        
+         
+        🌟 Challenge Your Inner Basketball Genius: Think you know the NBA like the back of your hand? Prove it! 
+         Our trivia is designed to test even the most seasoned fans.
+         <br>
+         <br>
+
+        🌟 Dive into the Legends' Realm: From the iconic Michael Jordan to the unstoppable LeBron James, our 
+        trivia covers the legends who've shaped the game. Relive their epic moments!
+        <br>
+        <br>
+        
+        🌟 Interactive Gameplay: It's not just questions and answers. Immerse yourself in a dynamic, 
+        user-friendly interface that makes every question feel like a courtside experience.
+        <br>
+        <br>
+        
+        🌟 Unlock Achievements and Bragging Rights: Conquer challenges, earn badges, and showcase your NBA 
+        knowledge to the world. Who will be the ultimate trivia MVP?
+        <br>
+        <br>
+        
+        🌟 Stay Updated with the Latest NBA Trends: Our trivia isn't stuck in the past. We're constantly updating 
+        questions to keep you on your toes with the latest NBA buzz.
+        <br>
+        <br>
+        
+        🎉 Exclusive Launch Offer: Be Among the First!
+        <br>
+        <br>
+        
+        🌟 To celebrate our grand opening, the first 100 users to complete all levels will receive a bronze Hoops HQ Trivia Champion badge!
+        <br>
+        <br>
+        
+        🔥 Join the NBA Trivia Revolution Now! Click, Play, Dominate! 🏆
+        <br>
+        <br>
+        
+        Don't miss out on the action – join the NBA Trivia community and let the games begin! 
+        Are you ready to claim your spot among the elite basketball minds? 
+        
+        <br>
+        <br>
+        Pick from the 4 difficulties below to get started!
+    </div>
+  </div>
+</section>
+
+<!--difficulty selection-->
+<section id="content">
+<br>
+<br>
+<h1 style="text-align: center; font-family: 'Allerta',Helvetica,Arial,sans-serif';">Select the Difficulty Below!</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div id="button-list">
+    <a href="trivia-easy.html"><button type="button" id="button1">Easy</button>
+    <a href="trivia-intermediate.html"><button type="button" id="button2">Intermediate</button>
+    <a href="trivia-hard.html"><button type="button" id="button3">Hard</button>
+    <a href="trivia-ultimate-ball-knower.html"><button type="button" id="button4">Ultimate Ball Knower</button>
+  </div>
+  
+  <style>
+    #button1 {
+      width: 334px;
+      height: 40px;
+      background-color: #12a3df;
+  }
+
+  #button2{
+    width: 334px;
+    height: 40px;
+    background-color: #12a3df;
+  }
+
+  #button3{
+    width: 334px;
+    height: 40px;
+    background-color: #12a3df;
+  }
+
+  #button4{
+    width: 334px;
+    height: 40px;
+    background-color: #12a3df;
+  }
+
+  #container{
+    text-align: center;
+    width: 50%;
+  }
+
+  </style>
+</section>
+
+<!--animations-->
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/custom.js"></script>

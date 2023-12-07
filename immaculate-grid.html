@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Immaculate Grid!</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<!--loading animation-->
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+
+<!--nav bar-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="hoops-hq-logos/logo-nav-bar.png" height="50px" width="120px" alt="hoops-hq-logo"></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav custom_nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="pages/immaculate-grid.html">Immaculate Grid</a></li>
+          <li><a href="trivia.html">Trivia!</a></li>
+          <li><a href="voting-poll.html">Voting Poll!</a></li>
+          <li class="dropdown"><a href="stat-of-the-day-home.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stat of the Day</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="stat-of-the-day-home.html">12/2/23</a></li>
+              <li><a href="previous-day.html">12/1/23</a></li>
+              <li><a href="2-days-prior.html">11/30/23</a></li>
+            </ul>
+          </li>
+          <li><a href="leaders.html">League Leaders</a></li>
+          <li><a href="schedule.html">Daily Schedule</a></li>
+          <li><a href="404.html">Pick 'Em!</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
+        <form action="#">
+          <input class="search_bar" type="text" placeholder="Search here">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--css-->
+<style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px; /* Adjust the gap as needed */
+      text-align: center;
+    }
+
+    .button {
+      width: 100px;
+      height: 100px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: white;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+    }
+
+    .button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8, .button9, .button10, .button11, .button12, .button13, .button14, .button15, .button16 {
+      width: 100px;
+      height: 100px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: white;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+    }
+
+    .green {
+      background-color: green;
+      color: white;
+    }
+</style>
+
+<!--the grid.-->
+<section>
+  <div class="grid" id="grid">
+    <!-- Create a 4x4 grid of buttons -->
+    <!-- You can customize the onclick attribute to perform specific actions -->
+    <button class="button1"></button>
+    <button class="button2"><img src="immaculate-grid/76ers-ig.png" height="60px" width="80px" alt="2png"></button>
+    <button class="button3"><img src="immaculate-grid/jazz-ig.png" height="60px" width="80px" alt="3png"></button>
+    <button class="button4"><img src="immaculate-grid/magic-ig.png" height="60px" width="80px" alt="4png"></button>
+    <button class="button5"><img src="immaculate-grid/wizards-ig.png" height="60px" width="80px" alt="5png"></button>
+    <button class="button6" onclick="checkInput1()"></button>
+    <button class="button7" onclick="checkInput2()"></button>
+    <button class="button8" onclick="checkInput3()"></button>
+    <button class="button9"><img src="immaculate-grid/raptors-ig.png" height="60px" width="80px" alt="9png"></button>
+    <button class="button10" onclick="checkInput4()"></button>
+    <button class="button11" onclick="checkInput5()"></button>
+    <button class="button12" onclick="checkInput6()"></button>
+    <button class="button13"><img src="immaculate-grid/kings-ig.png" height="60px" width="80px" alt="13png"></button>
+    <button class="button14" onclick="checkInput7()"></button>
+    <button class="button15" onclick="checkInput8()"></button>
+    <button class="button16" onclick="checkInput9()"></button>
+  </div>
+
+
+<!--js for the grid.-->
+<script>
+  //const correctValues = ['ron anderson', 'isaac austin', 'manute bol', 'trevor booker', 'calvin booth', 'damone brown', 'kwame brown', 'trey burke', 'barney cable', 'fred carter', 'terry catledge', 'archie clark', 'steve colter', 'mel counts', 'michael curry', 'antonio daniels', 'leroy ellis', 'tim frazier', 'joe graboski', 'greg grant', 'harvey grant', 'johnny green', 'kenny green', 'montrezl harrell', 'danuel house jr', 'dwight howard', 'bailey howell', 'larry hughes', 'jaren jackson', 'george johnson', 'charles jones', 'wali jones', 'red kerr', 'albert king', 'manny leaks', 'kevin loughery', 'don maclean', 'shelvin mack', 'rick mahorn', 'jeff malone', 'moses malone', 'wes matthews', 'eric maynor', 'jaVale mcgee', 'jodie meeks', 'andre miller', 'greg monroe', 'perry moss', 'mike muscala', 'raul neto', 'brian oliver', 'kelly oubre jr', 'doug overton', 'kevin pritchard', 'chasson randle', 'cliff robinson', 'michael ruffin', 'jeff ruland', 'mike scott', 'landry shamet', 'scott skiles', 'ish smith', 'jason smith', 'darius songaila', 'jerry stackhouse', 'bob thornton', 'andre turner', 'jay vincent', 'ben warley', 'chris webber', 'bob weiss', 'walt wesley', 'david wingate', 'leon wood', 'nick young']
+
+  function checkInput1() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+      6: true,   // Button 6
+    };
+
+    // Display a window prompt to get user input
+    const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+    // Check if the input satisfies the condition for the button
+    const isValidInput = buttonConditions && (
+      userInput === "ron anderson" || 
+      userInput === "isaac austin" ||
+      userInput === "manute bol" ||
+      userInput === "trevor booker" ||
+      userInput === "calvin booth" ||
+      userInput === "damone brown" ||
+      userInput ===  "kwame brown" ||
+      userInput ===  "trey burke" ||
+      userInput ===  "barney cable" ||
+      userInput ===  "fred carter" ||
+      userInput ===  "terry catledge" ||
+      userInput ===  "archie clark" ||
+      userInput ===  "steve colter" ||
+      userInput ===  "mel counts" ||
+      userInput === "michael curry" ||
+      userInput === "antonio daniels" ||
+      userInput === "leroy ellis" ||
+      userInput === "tim frazier" ||
+      userInput ===  "joe graboski" ||
+      userInput ===  "greg grant" ||
+      userInput ===  "harvey grant" ||
+      userInput ===  "johnny green" ||
+      userInput ===  "kenny green" ||
+      userInput ===  "montrezl harrell" ||
+      userInput ===  "danuel house jr" ||
+      userInput ===  "dwight howard" ||
+      userInput ===  "bailey howell" ||
+      userInput ===  "larry hughes" ||
+      userInput ===  "jaren jackson" ||
+      userInput ===  "george johnson" ||
+      userInput ===  "charles jones" ||
+      userInput ===  "wali jones" ||
+      userInput ===  "red kerr" ||
+      userInput ===  "albert king" ||
+      userInput ===  "manny leaks" ||
+      userInput ===  "kevin loughery" ||
+      userInput ===  "don maclean" ||
+      userInput ===  "shelvin mack" ||
+      userInput ===  "rick mahorn" ||
+      userInput ===  "jeff malone" ||
+      userInput ===  "moses malone" ||
+      userInput ===  "wes matthews" ||
+      userInput ===  "eric maynor" ||
+      userInput ===  "javale mcgee" ||
+      userInput ===  "jodie meeks" ||
+      userInput ===  "andre miller" ||
+      userInput ===  "greg monroe" ||
+      userInput ===  "perry moss" ||
+      userInput ===  "mike muscala" ||
+      userInput ===  "raul neto" ||
+      userInput ===  "brian oliver" ||
+      userInput ===  "kelly oubre jr" ||
+      userInput ===  "doug overton" ||
+      userInput ===  "kevin pritchard" ||
+      userInput ===  "chasson randle" ||
+      userInput ===  "cliff robinson" ||
+      userInput ===  "michael ruffin" ||
+      userInput ===  "jeff ruland" ||
+      userInput ===  "mike scott" ||
+      userInput ===  "landry shamet" ||
+      userInput ===  "scott skiles" ||
+      userInput ===  "ish smith" ||
+      userInput ===  "jason smith" ||
+      userInput ===  "darius songaila" ||
+      userInput ===  "jerry stackhouse" ||
+      userInput ===  "bob thornton" ||
+      userInput ===  "andre turner" ||
+      userInput ===  "jay vincent"||
+      userInput ===  "ben warley" ||
+      userInput ===  "chris webber" ||
+      userInput ===  "bob weiss" ||
+      userInput ===  "walt wesley" ||
+      userInput ===  "david wingate" ||
+      userInput ===  "leon wood" ||
+      userInput ===  "nick young")
+
+    // Get the corresponding button element
+    const buttonElement = document.querySelector(`.button6`);
+
+    // Update the button's style based on the validation result
+    if (isValidInput) {
+      buttonElement.classList.add("green");
+    } else {
+      alert("Invalid input. Try again."); // You can customize this message
+    }
+  }
+
+  function checkInput2() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        7: true,   // Button 7
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "morris almond" || 
+      userInput === "isaac austin" ||
+      userInput === "bus bailey" ||
+      userInput === "ron behagen" ||
+      userInput === "walt bellamy" ||
+      userInput === "bojan bogdanovic" ||
+      userInput === "trevor booker" ||
+      userInput === "dee brown" ||
+      userInput === "trey burke" ||
+      userInput ===  "jared butler" ||
+      userInput ===  "calbert cheaney" ||
+      userInput ===  "mel counts" ||
+      userInput ===  "greg foster" ||
+      userInput ===  "randy foye" ||
+      userInput ===  "jeff green" ||
+      userInput ===  "tom gugliotta" ||
+      userInput ===  "mike harris" ||
+      userInput === "spencer haywood" ||
+      userInput === "danuel house jr" ||
+      userInput === "josh howard" ||
+      userInput === "kris humphries" ||
+      userInput ===  "othyus jeffers" ||
+      userInput ===  "bernard king" ||
+      userInput ===  "brevin knight" ||
+      userInput ===  "tim legler" ||
+      userInput ===  "shevlin mack" ||
+      userInput ===  "jeff malone" ||
+      userInput ===  "eric maynor" ||
+      userInput ===  "cj miles" ||
+      userInput ===  "greg monroe" ||
+      userInput ===  "toure' murry" ||
+      userInput ===  "toure murry" ||
+      userInput ===  "louie nelson" ||
+      userInput ===  "raul neto" ||
+      userInput ===  "truck robinson" ||
+      userInput ===  "micael ruffin" ||
+      userInput ===  "byron russell" ||
+      userInput ===  "deshawn stevenson" ||
+      userInput ===  "bob thornton" ||
+      userInput ===  "melvin turpin" ||
+      userInput ===  "aaron williams" ||
+      userInput ===  "freeman williams")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button7`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput3() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        8: true,   // Button 8
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "mark acres" || 
+      userInput === "gilbert arenas" ||
+      userInput === "trevor ariza" ||
+      userInput === "chucky atkins" ||
+      userInput === "issac austin" ||
+      userInput === "earl boykins" ||
+      userInput === "terry catledge" ||
+      userInput === "brian cook" ||
+      userInput === "chris corchiani" ||
+      userInput === "dave corzine" ||
+      userInput === "maurice evans" ||
+      userInput === "tim frazier" ||
+      userInput === "drew gooden" ||
+      userInput === "marcin gortat" ||
+      userInput === "jerian grant" ||
+      userInput === "jeff green" ||
+      userInput === "al harrington" ||
+      userInput === "dwight howard" ||
+      userInput === "juwan howard" ||
+      userInput === "larry hughes" ||
+      userInput === "jaren jackson" ||
+      userInput === "brandon jennings" ||
+      userInput === "rashard lewis" ||
+      userInput === "robin lopez" ||
+      userInput === "tyronn lue" ||
+      userInput === "shelvin mack" ||
+      userInput === "jodie meeks" ||
+      userInput === "mike miller" ||
+      userInput === "shabazz napier" ||
+      userInput === "andrew nicholson" ||
+      userInput === "doug overton" ||
+      userInput === "otto porter jr" ||
+      userInput === "mark price" ||
+      userInput === "chasson randle" ||
+      userInput === "don reid" ||
+      userInput === "admiral schofield" ||
+      userInput === "scott skiles" ||
+      userInput === "ish smith" ||
+      userInput === "jason smith" ||
+      userInput === "deshawn stevenson" ||
+      userInput === "rod strickland" ||
+      userInput === "derek strong" ||
+      userInput === "moritz wagner" ||
+      userInput === "mo wagner" ||
+      userInput === "ben wallace" ||
+      userInput === "chris whitney" ||
+      userInput === "lorenzo williams")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button8`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput4() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        10: true,   // Button 10
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "jerryd bayless" || 
+      userInput === "marco belinelli" ||
+      userInput === "benoit benjamin" ||
+      userInput === "corie blount" ||
+      userInput === "michael bradley" ||
+      userInput === "primoz berzec" ||
+      userInput ===  "damone brown" ||
+      userInput ===  "lorenzo brown" ||
+      userInput ===  "william cunningham" ||
+      userInput ===  "earl cureton" ||
+      userInput ===  "michael curry" ||
+      userInput ===  "lloyd daniels" ||
+      userInput ===  "reggie evans" ||
+      userInput ===  "danny green" ||
+      userInput === "zendon hamilton" ||
+      userInput === "amir johnson" ||
+      userInput === "jason kapono" ||
+      userInput === "antonio lang" ||
+      userInput ===  "art long" ||
+      userInput ===  "donyell marshall" ||
+      userInput ===  "tony massenburg" ||
+      userInput ===  "jalen mcdaniels" ||
+      userInput ===  "jodie meeks" ||
+      userInput ===  "greg monroe" ||
+      userInput ===  "eric montross" ||
+      userInput ===  "anthony parker" ||
+      userInput ===  "ed pickney" ||
+      userInput ===  "john salmons" ||
+      userInput ===  "pj tucker" ||
+      userInput ===  "sonny weems" ||
+      userInput ===  "lou williams" ||
+      userInput ===  "corliss willaimson" ||
+      userInput ===  "sharone wright" ||
+      userInput ===  "thaddeus young")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button10`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput5() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        11: true,   // Button 11
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "rafael araujo" || 
+      userInput === "carlos arroyo" ||
+      userInput === "demarre carroll" ||
+      userInput === "keon clark" ||
+      userInput === "tyrone corbin" ||
+      userInput === "william cunningham" ||
+      userInput === "dell curry" ||
+      userInput === "ed davis" ||
+      userInput === "greg foster" ||
+      userInput === "sundiata gaines" ||
+      userInput ===  "rudy gay" ||
+      userInput ===  "juancho hernangomez" ||
+      userInput ===  "juan hernangomez" ||
+      userInput ===  "rodney hood" ||
+      userInput ===  "kris humphries" ||
+      userInput ===  "mark jackson" ||
+      userInput ===  "jon lucas iii" ||
+      userInput ===  "donyell marshall" ||
+      userInput ===  "tony massenburg" ||
+      userInput ===  "cj miles" ||
+      userInput ===  "greg monroe" ||
+      userInput ===  "jowan morgan" ||
+      userInput ===  "steve novak" ||
+      userInput ===  "don o'sullivan" ||
+      userInput ===  "milt palacio" ||
+      userInput ===  "aleksandar radojevic" ||
+      userInput ===  "matt thomas" ||
+      userInput ===  "aaron williams")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button11`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput6() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        12: true,   // Button 12
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+      
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "khem birch" || 
+      userInput === "freddie gillespie")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button12`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput7() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        14: true,   // Button 14
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+      
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "alaa abdelnaby" || 
+      userInput === "james anderson" ||
+      userInput === "vincent askew" ||
+      userInput === "matt barnes" ||
+      userInput === "marco belinelli" ||
+      userInput === "john block" ||
+      userInput === "calvin booth" ||
+      userInput === "michael bradley" ||
+      userInput === "corey brewer" ||
+      userInput === "rodney buford" ||
+      userInput === "alec burks" ||
+      userInput === "bill calhoun" ||
+      userInput === "willie cauley-stein" ||
+      userInput === "willie cauley stein" ||
+      userInput === "len chappell" ||
+      userInput === "steve colter" ||
+      userInput === "seth curry" ||
+      userInput === "samuel dalembert" ||
+      userInput === "lloyd daniels" ||
+      userInput === "dewayne dedmon" ||
+      userInput === "connie dierking" ||
+      userInput === "ken durrett" ||
+      userInput === "franklin edwards" ||
+      userInput === "reggie evans" ||
+      userInput === "fred foster" ||
+      userInput === "dave gambee" ||
+      userInput === "jeff grayer" ||
+      userInput === "johnny green" ||
+      userInput === "matt guokas" ||
+      userInput === "alex hannum" ||
+      userInput === "spencer hawes" ||
+      userInput === "mark hendrickson" ||
+      userInput === "fred hetzel" ||
+      userInput === "art heyman" ||
+      userInput === "george hill" ||
+      userInput === "justin holiday" ||
+      userInput === "richaun holmes" ||
+      userInput === "darrall imhoff" ||
+      userInput === "jim jackson" ||
+      userInput === "ollie johnson" ||
+      userInput === "reggie johnson" ||
+      userInput === "jake jones" ||
+      userInput === "tony kimball" ||
+      userInput === "george king" ||
+      userInput === "louis king" ||
+      userInput === "carl landry" ||
+      userInput === "eric leckner" ||
+      userInput === "andrew levane" ||
+      userInput === "art long" ||
+      userInput === "al masino" ||
+      userInput === "tony massenburg" ||
+      userInput === "vernon maxwell" ||
+      userInput === "don may" ||
+      userInput === "luc richard mbah a moute" ||
+      userInput === "luc mbah a moute" ||
+      userInput === "javale mcgee" ||
+      userInput === "mark mcnamara" ||
+      userInput === "andre miller" ||
+      userInput === "andres nocioni" ||
+      userInput === "mike novak" ||
+      userInput === "kevin ollie" ||
+      userInput === "billy owens" ||
+      userInput === "norvel pelle" ||
+      userInput === "filip petrusev" ||
+      userInput === "ed pinckney" ||
+      userInput === "luther rackley" ||
+      userInput === "marlon redmond" ||
+      userInput === "cliff robinson" ||
+      userInput === "glen robinson iii" ||
+      userInput === "thomas robinson" ||
+      userInput === "sergio rodriguez"||
+      userInput === "john salmons" ||
+      userInput === "jakarr sampson" ||
+      userInput === "connie simmons" ||
+      userInput === "brian skinner" ||
+      userInput === "derek smith" ||
+      userInput === "jabari smith" ||
+      userInput === "darius songaila" ||
+      userInput === "nik stauskas," ||
+      userInput === "greg stokes" ||
+      userInput === "kenny thomas" ||
+      userInput === "lasalle thompson" ||
+      userInput === "anthony tolliver" ||
+      userInput === "tom van arsdale" ||
+      userInput === "chris webber" ||
+      userInput === "walt wesley" ||
+      userInput === "corliss williamson" ||
+      userInput === "george wilson" ||
+      userInput === "trevor wilson" ||
+      userInput === "leon wood"
+      )
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button14`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput8() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        15: true,   // Button 15
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "rick adelman" || 
+      userInput === "ron behagen" ||
+      userInput === "john block" ||
+      userInput === "ron boone" ||
+      userInput === "alec burks" ||
+      userInput === "antoine carr" ||
+      userInput === "pete chilcutt" ||
+      userInput === "keon clark" ||
+      userInput === "jack cooley" ||
+      userInput === "tyrone corbin" ||
+      userInput === "jerry eaves" ||
+      userInput === "rudy gay" ||
+      userInput === "bob hansen" ||
+      userInput === "jason hart" ||
+      userInput === "george hill" ||
+      userInput === "henry james" ||
+      userInput === "ollie johnson" ||
+      userInput === "damian jones" ||
+      userInput === "rich kelly" ||
+      userInput === "toby kimball" ||
+      userInput === "kostas koufos" ||
+      userInput === "eric leckner" ||
+      userInput === "jim les" ||
+      userInput === "trey lyles" ||
+      userInput === "tony massenburg" ||
+      userInput === "billy mckinney" ||
+      userInput === "joe meriweather" ||
+      userInput ===  "mikki moore" ||
+      userInput ===  "otto moore" ||
+      userInput ===  "emmanuel mudiay" ||
+      userInput ===  "kenny natt" ||
+      userInput ===  "louie nelson" ||
+      userInput ===  "greg ostertag" ||
+      userInput ===  "norvel pelle" ||
+      userInput ===  "olden polynice" ||
+      userInput ===  "ronnie price" ||
+      userInput ===  "rick roberson" ||
+      userInput ===  "bob robinzine" ||
+      userInput ===  "david stockton" ||
+      userInput ===  "hassan whiteside" ||
+      userInput ===  "nate williams")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button15`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+
+  function checkInput9() {
+    // Get the condition for the specified button
+    const buttonConditions = {
+        16: true,   // Button 16
+      };
+
+      // Display a window prompt to get user input
+      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+      
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+      userInput === "tariq abdul-wahad" || 
+      userInput === "aaron afflalo" ||
+      userInput === "nick anderson" ||
+      userInput === "trevor ariza" ||
+      userInput === "matt barnes" ||
+      userInput === "anthony bonner" ||
+      userInput ===  "michael bradley" ||
+      userInput ===  "vince carter" ||
+      userInput ===  "doug christie" ||
+      userInput ===  "dewayne dedmon" ||
+      userInput ===  "maurice harkless" ||
+      userInput ===  "anthony johnson" ||
+      userInput ===  "bj johnson" ||
+      userInput ===  "greg kite" ||
+      userInput === "frank mason" ||
+      userInput === "vernon maxwell" ||
+      userInput === "mark mcnamara" ||
+      userInput === "cuttino mobley" ||
+      userInput ===  "jawann oldham" ||
+      userInput ===  "kevin ollie" ||
+      userInput ===  "ronnie price" ||
+      userInput ===  "kenny smith" ||
+      userInput ===  "reggie theus" ||
+      userInput ===  "carl thomas" ||
+      userInput ===  "stephen thompson" ||
+      userInput ===  "hedo turkloglu" ||
+      userInput ===  "beno udrih" ||
+      userInput ===  "spud webb" ||
+      userInput ===  "jason williams")
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector(`.button16`);
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+  
+</script>
+
+</section>
+
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/custom.js"></script>

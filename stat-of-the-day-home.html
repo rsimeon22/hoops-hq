@@ -1,0 +1,194 @@
+!DOCTYPE html>
+<html>
+<head>
+<title>Schedule!</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<!--loading animation-->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<!--nav bar-->
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<header id="header">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"><img src="hoops-hq-logos/logo-nav-bar.png" height="50px" width="120px" alt="hoops-hq-logo"></a></div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav custom_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="immaculate-grid.html">Immaculate Grid</a></li>
+          <li><a href="trivia.html">Trivia!</a></li>
+          <li><a href="voting-poll.html">Voting Poll!</a></li>
+          <li class="dropdown"><a href="stat-of-the-day-home.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Stat of the Day</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="stat-of-the-day-home.html">12/2/23</a></li>
+              <li><a href="previous-day.html">12/1/23</a></li>
+              <li><a href="2-days-prior.html">11/30/23</a></li>
+            </ul>
+          </li>
+          <li><a href="leaders.html">League Leaders</a></li>
+          <li><a href="schedule.html">Daily Schedule</a></li>
+          <li><a href="404.html">Pick 'Em!</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
+        <form action="#">
+          <input class="search_bar" type="text" placeholder="Search here">
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--css-->
+<style>
+    p{
+      font-size: medium;
+      font-family: 'Allerta',Helvetica,Arial,sans-serif;
+    }
+
+    h2{
+      font-family: 'Allerta',Helvetica,Arial,sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    section{
+        text-align: center;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .date-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .date-navigation button {
+        padding: 10px;
+        background-color: #12a3df;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .stat-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+    }
+
+    button {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+</style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--intro-->
+<div class="nav-container">
+  <h3>
+    Welcome to our "Stat of the Day" webpage, your daily dose of intriguing statistics spanning the vast world of information! 
+    Every day, we curate and present a fascinating statistic that touches on various topics, from science and technology to sports, history, 
+    and beyond.
+    <br>
+    <br>
+    Dive into a world of numbers and discover the stories they tell. Our goal is to provide you with a thought-provoking, informative, 
+    and sometimes surprising statistic each day. Whether you're a data enthusiast, a curious mind, or someone who simply loves learning 
+    new things, our Stat of the Day is designed to captivate and inspire.
+    <br>
+    <br>
+    Join us on this daily journey of discovery as we explore the numerical side of life, offering insights that might make you ponder, 
+    smile, or even spark a conversation. Knowledge is power, and we believe that a single statistic has the potential to open up a 
+    world of ideas.
+    <br>
+    <br>
+    Follow us for your daily infusion of interesting facts and figures. Who knows what intriguing statistic awaits you today? 
+    Let the exploration begin!
+    <br>
+    <br>
+    <br>
+    <br>
+  </h3>
+
+<!--button(s)-->
+  <div class="date-navigation">
+    <button 
+      style="font-family: 'Allerta',Helvetica,Arial,sans-serif;"
+      class="contact" onclick="document.location.href='previous-day.html'">
+      Yesterday's Stat of the Day!
+    </button>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+<!--the stat-->
+  <section>
+    <div class="stat-container">
+      <img src="stat-of-the-day-images/tyrese-haliburton.webp" height="325px" width="600px">
+      <br>
+      <h3>Tyrese Haliburton's scorching shooting in the clutch</h3>
+      <br>
+      <br>
+      <br>
+      <p>
+        Tyrese Haliburton has demonstrated exceptional proficiency in clutch situations throughout the current season, boasting an impressive 
+        shooting accuracy of 73.7% from the field, 77.8% from beyond the arc, and a flawless 100% success rate at the free-throw line. His 
+        remarkable composure and precision during critical moments highlight his ability to deliver under pressure, making him a key asset 
+        for his Indiana Pacers when the game hangs in the balance.
+      </p>
+  </section>
+
+
+
+<!--animations-->
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/wow.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/slick.min.js"></script> 
+<script src="assets/js/custom.js"></script>
+</body>

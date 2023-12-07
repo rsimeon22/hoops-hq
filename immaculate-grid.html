@@ -148,83 +148,86 @@
     // Display a window prompt to get user input
     const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
+    // Convert to lowercase
+    lowerCaseInput = userInput.toLowerCase();
+
     // Check if the input satisfies the condition for the button
     const isValidInput = buttonConditions && (
-      userInput === "ron anderson" || 
-      userInput === "isaac austin" ||
-      userInput === "manute bol" ||
-      userInput === "trevor booker" ||
-      userInput === "calvin booth" ||
-      userInput === "damone brown" ||
-      userInput ===  "kwame brown" ||
-      userInput ===  "trey burke" ||
-      userInput ===  "barney cable" ||
-      userInput ===  "fred carter" ||
-      userInput ===  "terry catledge" ||
-      userInput ===  "archie clark" ||
-      userInput ===  "steve colter" ||
-      userInput ===  "mel counts" ||
-      userInput === "michael curry" ||
-      userInput === "antonio daniels" ||
-      userInput === "leroy ellis" ||
-      userInput === "tim frazier" ||
-      userInput ===  "joe graboski" ||
-      userInput ===  "greg grant" ||
-      userInput ===  "harvey grant" ||
-      userInput ===  "johnny green" ||
-      userInput ===  "kenny green" ||
-      userInput ===  "montrezl harrell" ||
-      userInput ===  "danuel house jr" ||
-      userInput ===  "dwight howard" ||
-      userInput ===  "bailey howell" ||
-      userInput ===  "larry hughes" ||
-      userInput ===  "jaren jackson" ||
-      userInput ===  "george johnson" ||
-      userInput ===  "charles jones" ||
-      userInput ===  "wali jones" ||
-      userInput ===  "red kerr" ||
-      userInput ===  "albert king" ||
-      userInput ===  "manny leaks" ||
-      userInput ===  "kevin loughery" ||
-      userInput ===  "don maclean" ||
-      userInput ===  "shelvin mack" ||
-      userInput ===  "rick mahorn" ||
-      userInput ===  "jeff malone" ||
-      userInput ===  "moses malone" ||
-      userInput ===  "wes matthews" ||
-      userInput ===  "eric maynor" ||
-      userInput ===  "javale mcgee" ||
-      userInput ===  "jodie meeks" ||
-      userInput ===  "andre miller" ||
-      userInput ===  "greg monroe" ||
-      userInput ===  "perry moss" ||
-      userInput ===  "mike muscala" ||
-      userInput ===  "raul neto" ||
-      userInput ===  "brian oliver" ||
-      userInput ===  "kelly oubre jr" ||
-      userInput ===  "doug overton" ||
-      userInput ===  "kevin pritchard" ||
-      userInput ===  "chasson randle" ||
-      userInput ===  "cliff robinson" ||
-      userInput ===  "michael ruffin" ||
-      userInput ===  "jeff ruland" ||
-      userInput ===  "mike scott" ||
-      userInput ===  "landry shamet" ||
-      userInput ===  "scott skiles" ||
-      userInput ===  "ish smith" ||
-      userInput ===  "jason smith" ||
-      userInput ===  "darius songaila" ||
-      userInput ===  "jerry stackhouse" ||
-      userInput ===  "bob thornton" ||
-      userInput ===  "andre turner" ||
-      userInput ===  "jay vincent"||
-      userInput ===  "ben warley" ||
-      userInput ===  "chris webber" ||
-      userInput ===  "bob weiss" ||
-      userInput ===  "walt wesley" ||
-      userInput ===  "david wingate" ||
-      userInput ===  "leon wood" ||
-      userInput ===  "nick young")
+      lowerCaseInput === "ron anderson" || 
+      lowerCaseInput === "isaac austin" ||
+      lowerCaseInput === "manute bol" ||
+      lowerCaseInput === "trevor booker" ||
+      lowerCaseInput === "calvin booth" ||
+      lowerCaseInput === "damone brown" ||
+      lowerCaseInput ===  "kwame brown" ||
+      lowerCaseInput ===  "trey burke" ||
+      lowerCaseInput ===  "barney cable" ||
+      lowerCaseInput ===  "fred carter" ||
+      lowerCaseInput ===  "terry catledge" ||
+      lowerCaseInput ===  "archie clark" ||
+      lowerCaseInput ===  "steve colter" ||
+      lowerCaseInput ===  "mel counts" ||
+      lowerCaseInput === "michael curry" ||
+      lowerCaseInput === "antonio daniels" ||
+      lowerCaseInput === "leroy ellis" ||
+      lowerCaseInput === "tim frazier" ||
+      lowerCaseInput ===  "joe graboski" ||
+      lowerCaseInput ===  "greg grant" ||
+      lowerCaseInput ===  "harvey grant" ||
+      lowerCaseInput ===  "johnny green" ||
+      lowerCaseInput ===  "kenny green" ||
+      lowerCaseInput ===  "montrezl harrell" ||
+      lowerCaseInput ===  "danuel house jr" ||
+      lowerCaseInput ===  "dwight howard" ||
+      lowerCaseInput ===  "bailey howell" ||
+      lowerCaseInput ===  "larry hughes" ||
+      lowerCaseInput ===  "jaren jackson" ||
+      lowerCaseInput ===  "george johnson" ||
+      lowerCaseInput ===  "charles jones" ||
+      lowerCaseInput ===  "wali jones" ||
+      lowerCaseInput ===  "red kerr" ||
+      lowerCaseInput ===  "albert king" ||
+      lowerCaseInput ===  "manny leaks" ||
+      lowerCaseInput ===  "kevin loughery" ||
+      lowerCaseInput ===  "don maclean" ||
+      lowerCaseInput ===  "shelvin mack" ||
+      lowerCaseInput ===  "rick mahorn" ||
+      lowerCaseInput ===  "jeff malone" ||
+      lowerCaseInput ===  "moses malone" ||
+      lowerCaseInput ===  "wes matthews" ||
+      lowerCaseInput ===  "eric maynor" ||
+      lowerCaseInput ===  "javale mcgee" ||
+      lowerCaseInput ===  "jodie meeks" ||
+      lowerCaseInput ===  "andre miller" ||
+      lowerCaseInput ===  "greg monroe" ||
+      lowerCaseInput ===  "perry moss" ||
+      lowerCaseInput ===  "mike muscala" ||
+      lowerCaseInput ===  "raul neto" ||
+      lowerCaseInput ===  "brian oliver" ||
+      lowerCaseInput ===  "kelly oubre jr" ||
+      lowerCaseInput ===  "doug overton" ||
+      lowerCaseInput ===  "kevin pritchard" ||
+      lowerCaseInput ===  "chasson randle" ||
+      lowerCaseInput ===  "cliff robinson" ||
+      lowerCaseInput ===  "michael ruffin" ||
+      lowerCaseInput ===  "jeff ruland" ||
+      lowerCaseInput ===  "mike scott" ||
+      lowerCaseInput ===  "landry shamet" ||
+      lowerCaseInput ===  "scott skiles" ||
+      lowerCaseInput ===  "ish smith" ||
+      lowerCaseInput ===  "jason smith" ||
+      lowerCaseInput ===  "darius songaila" ||
+      lowerCaseInput ===  "jerry stackhouse" ||
+      lowerCaseInput ===  "bob thornton" ||
+      lowerCaseInput ===  "andre turner" ||
+      lowerCaseInput ===  "jay vincent"||
+      lowerCaseInput ===  "ben warley" ||
+      lowerCaseInput ===  "chris webber" ||
+      lowerCaseInput ===  "bob weiss" ||
+      lowerCaseInput ===  "walt wesley" ||
+      lowerCaseInput ===  "david wingate" ||
+      lowerCaseInput ===  "leon wood" ||
+      lowerCaseInput ===  "nick young")
 
     // Get the corresponding button element
     const buttonElement = document.querySelector(`.button6`);
@@ -246,50 +249,53 @@
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
+
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "morris almond" || 
-      userInput === "isaac austin" ||
-      userInput === "bus bailey" ||
-      userInput === "ron behagen" ||
-      userInput === "walt bellamy" ||
-      userInput === "bojan bogdanovic" ||
-      userInput === "trevor booker" ||
-      userInput === "dee brown" ||
-      userInput === "trey burke" ||
-      userInput ===  "jared butler" ||
-      userInput ===  "calbert cheaney" ||
-      userInput ===  "mel counts" ||
-      userInput ===  "greg foster" ||
-      userInput ===  "randy foye" ||
-      userInput ===  "jeff green" ||
-      userInput ===  "tom gugliotta" ||
-      userInput ===  "mike harris" ||
-      userInput === "spencer haywood" ||
-      userInput === "danuel house jr" ||
-      userInput === "josh howard" ||
-      userInput === "kris humphries" ||
-      userInput ===  "othyus jeffers" ||
-      userInput ===  "bernard king" ||
-      userInput ===  "brevin knight" ||
-      userInput ===  "tim legler" ||
-      userInput ===  "shevlin mack" ||
-      userInput ===  "jeff malone" ||
-      userInput ===  "eric maynor" ||
-      userInput ===  "cj miles" ||
-      userInput ===  "greg monroe" ||
-      userInput ===  "toure' murry" ||
-      userInput ===  "toure murry" ||
-      userInput ===  "louie nelson" ||
-      userInput ===  "raul neto" ||
-      userInput ===  "truck robinson" ||
-      userInput ===  "micael ruffin" ||
-      userInput ===  "byron russell" ||
-      userInput ===  "deshawn stevenson" ||
-      userInput ===  "bob thornton" ||
-      userInput ===  "melvin turpin" ||
-      userInput ===  "aaron williams" ||
-      userInput ===  "freeman williams")
+      lowerCaseInput === "morris almond" || 
+      lowerCaseInput === "isaac austin" ||
+      lowerCaseInput === "bus bailey" ||
+      lowerCaseInput === "ron behagen" ||
+      lowerCaseInput === "walt bellamy" ||
+      lowerCaseInput === "bojan bogdanovic" ||
+      lowerCaseInput === "trevor booker" ||
+      lowerCaseInput === "dee brown" ||
+      lowerCaseInput === "trey burke" ||
+      lowerCaseInput ===  "jared butler" ||
+      lowerCaseInput ===  "calbert cheaney" ||
+      lowerCaseInput ===  "mel counts" ||
+      lowerCaseInput ===  "greg foster" ||
+      lowerCaseInput ===  "randy foye" ||
+      lowerCaseInput ===  "jeff green" ||
+      lowerCaseInput ===  "tom gugliotta" ||
+      lowerCaseInput ===  "mike harris" ||
+      lowerCaseInput === "spencer haywood" ||
+      lowerCaseInput === "danuel house jr" ||
+      lowerCaseInput === "josh howard" ||
+      lowerCaseInput === "kris humphries" ||
+      lowerCaseInput ===  "othyus jeffers" ||
+      lowerCaseInput ===  "bernard king" ||
+      lowerCaseInput ===  "brevin knight" ||
+      lowerCaseInput ===  "tim legler" ||
+      lowerCaseInput ===  "shevlin mack" ||
+      lowerCaseInput ===  "jeff malone" ||
+      lowerCaseInput ===  "eric maynor" ||
+      lowerCaseInput ===  "cj miles" ||
+      lowerCaseInput ===  "greg monroe" ||
+      lowerCaseInput ===  "toure' murry" ||
+      lowerCaseInput ===  "toure murry" ||
+      lowerCaseInput ===  "louie nelson" ||
+      lowerCaseInput ===  "raul neto" ||
+      lowerCaseInput ===  "truck robinson" ||
+      lowerCaseInput ===  "micael ruffin" ||
+      lowerCaseInput ===  "byron russell" ||
+      lowerCaseInput ===  "deshawn stevenson" ||
+      lowerCaseInput ===  "bob thornton" ||
+      lowerCaseInput ===  "melvin turpin" ||
+      lowerCaseInput ===  "aaron williams" ||
+      lowerCaseInput ===  "freeman williams")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button7`);
@@ -308,58 +314,62 @@
         8: true,   // Button 8
       };
 
+
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
+
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "mark acres" || 
-      userInput === "gilbert arenas" ||
-      userInput === "trevor ariza" ||
-      userInput === "chucky atkins" ||
-      userInput === "issac austin" ||
-      userInput === "earl boykins" ||
-      userInput === "terry catledge" ||
-      userInput === "brian cook" ||
-      userInput === "chris corchiani" ||
-      userInput === "dave corzine" ||
-      userInput === "maurice evans" ||
-      userInput === "tim frazier" ||
-      userInput === "drew gooden" ||
-      userInput === "marcin gortat" ||
-      userInput === "jerian grant" ||
-      userInput === "jeff green" ||
-      userInput === "al harrington" ||
-      userInput === "dwight howard" ||
-      userInput === "juwan howard" ||
-      userInput === "larry hughes" ||
-      userInput === "jaren jackson" ||
-      userInput === "brandon jennings" ||
-      userInput === "rashard lewis" ||
-      userInput === "robin lopez" ||
-      userInput === "tyronn lue" ||
-      userInput === "shelvin mack" ||
-      userInput === "jodie meeks" ||
-      userInput === "mike miller" ||
-      userInput === "shabazz napier" ||
-      userInput === "andrew nicholson" ||
-      userInput === "doug overton" ||
-      userInput === "otto porter jr" ||
-      userInput === "mark price" ||
-      userInput === "chasson randle" ||
-      userInput === "don reid" ||
-      userInput === "admiral schofield" ||
-      userInput === "scott skiles" ||
-      userInput === "ish smith" ||
-      userInput === "jason smith" ||
-      userInput === "deshawn stevenson" ||
-      userInput === "rod strickland" ||
-      userInput === "derek strong" ||
-      userInput === "moritz wagner" ||
-      userInput === "mo wagner" ||
-      userInput === "ben wallace" ||
-      userInput === "chris whitney" ||
-      userInput === "lorenzo williams")
+      lowerCaseInput === "mark acres" || 
+      lowerCaseInput === "gilbert arenas" ||
+      lowerCaseInput === "trevor ariza" ||
+      lowerCaseInput === "chucky atkins" ||
+      lowerCaseInput === "issac austin" ||
+      lowerCaseInput === "earl boykins" ||
+      lowerCaseInput === "terry catledge" ||
+      lowerCaseInput === "brian cook" ||
+      lowerCaseInput === "chris corchiani" ||
+      lowerCaseInput === "dave corzine" ||
+      lowerCaseInput === "maurice evans" ||
+      lowerCaseInput === "tim frazier" ||
+      lowerCaseInput === "drew gooden" ||
+      lowerCaseInput === "marcin gortat" ||
+      lowerCaseInput === "jerian grant" ||
+      lowerCaseInput === "jeff green" ||
+      lowerCaseInput === "al harrington" ||
+      lowerCaseInput === "dwight howard" ||
+      lowerCaseInput === "juwan howard" ||
+      lowerCaseInput === "larry hughes" ||
+      lowerCaseInput === "jaren jackson" ||
+      lowerCaseInput === "brandon jennings" ||
+      lowerCaseInput === "rashard lewis" ||
+      lowerCaseInput === "robin lopez" ||
+      lowerCaseInput === "tyronn lue" ||
+      lowerCaseInput === "shelvin mack" ||
+      lowerCaseInput === "jodie meeks" ||
+      lowerCaseInput === "mike miller" ||
+      lowerCaseInput === "shabazz napier" ||
+      lowerCaseInput === "andrew nicholson" ||
+      lowerCaseInput === "doug overton" ||
+      lowerCaseInput === "otto porter jr" ||
+      lowerCaseInput === "mark price" ||
+      lowerCaseInput === "chasson randle" ||
+      lowerCaseInput === "don reid" ||
+      lowerCaseInput === "admiral schofield" ||
+      lowerCaseInput === "scott skiles" ||
+      lowerCaseInput === "ish smith" ||
+      lowerCaseInput === "jason smith" ||
+      lowerCaseInput === "deshawn stevenson" ||
+      lowerCaseInput === "rod strickland" ||
+      lowerCaseInput === "derek strong" ||
+      lowerCaseInput === "moritz wagner" ||
+      lowerCaseInput === "mo wagner" ||
+      lowerCaseInput === "ben wallace" ||
+      lowerCaseInput === "chris whitney" ||
+      lowerCaseInput === "lorenzo williams")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button8`);
@@ -381,42 +391,45 @@
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
+
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "jerryd bayless" || 
-      userInput === "marco belinelli" ||
-      userInput === "benoit benjamin" ||
-      userInput === "corie blount" ||
-      userInput === "michael bradley" ||
-      userInput === "primoz berzec" ||
-      userInput ===  "damone brown" ||
-      userInput ===  "lorenzo brown" ||
-      userInput ===  "william cunningham" ||
-      userInput ===  "earl cureton" ||
-      userInput ===  "michael curry" ||
-      userInput ===  "lloyd daniels" ||
-      userInput ===  "reggie evans" ||
-      userInput ===  "danny green" ||
-      userInput === "zendon hamilton" ||
-      userInput === "amir johnson" ||
-      userInput === "jason kapono" ||
-      userInput === "antonio lang" ||
-      userInput ===  "art long" ||
-      userInput ===  "donyell marshall" ||
-      userInput ===  "tony massenburg" ||
-      userInput ===  "jalen mcdaniels" ||
-      userInput ===  "jodie meeks" ||
-      userInput ===  "greg monroe" ||
-      userInput ===  "eric montross" ||
-      userInput ===  "anthony parker" ||
-      userInput ===  "ed pickney" ||
-      userInput ===  "john salmons" ||
-      userInput ===  "pj tucker" ||
-      userInput ===  "sonny weems" ||
-      userInput ===  "lou williams" ||
-      userInput ===  "corliss willaimson" ||
-      userInput ===  "sharone wright" ||
-      userInput ===  "thaddeus young")
+      lowerCaseInput === "jerryd bayless" || 
+      lowerCaseInput === "marco belinelli" ||
+      lowerCaseInput === "benoit benjamin" ||
+      lowerCaseInput === "corie blount" ||
+      lowerCaseInput === "michael bradley" ||
+      lowerCaseInput === "primoz berzec" ||
+      lowerCaseInput ===  "damone brown" ||
+      lowerCaseInput ===  "lorenzo brown" ||
+      lowerCaseInput ===  "william cunningham" ||
+      lowerCaseInput ===  "earl cureton" ||
+      lowerCaseInput ===  "michael curry" ||
+      lowerCaseInput ===  "lloyd daniels" ||
+      lowerCaseInput ===  "reggie evans" ||
+      lowerCaseInput ===  "danny green" ||
+      lowerCaseInput === "zendon hamilton" ||
+      lowerCaseInput === "amir johnson" ||
+      lowerCaseInput === "jason kapono" ||
+      lowerCaseInput === "antonio lang" ||
+      lowerCaseInput ===  "art long" ||
+      lowerCaseInput ===  "donyell marshall" ||
+      lowerCaseInput ===  "tony massenburg" ||
+      lowerCaseInput ===  "jalen mcdaniels" ||
+      lowerCaseInput ===  "jodie meeks" ||
+      lowerCaseInput ===  "greg monroe" ||
+      lowerCaseInput ===  "eric montross" ||
+      lowerCaseInput ===  "anthony parker" ||
+      lowerCaseInput ===  "ed pickney" ||
+      lowerCaseInput ===  "john salmons" ||
+      lowerCaseInput ===  "pj tucker" ||
+      lowerCaseInput ===  "sonny weems" ||
+      lowerCaseInput ===  "lou williams" ||
+      lowerCaseInput ===  "corliss willaimson" ||
+      lowerCaseInput ===  "sharone wright" ||
+      lowerCaseInput ===  "thaddeus young")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button10`);
@@ -438,36 +451,39 @@
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
+
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "rafael araujo" || 
-      userInput === "carlos arroyo" ||
-      userInput === "demarre carroll" ||
-      userInput === "keon clark" ||
-      userInput === "tyrone corbin" ||
-      userInput === "william cunningham" ||
-      userInput === "dell curry" ||
-      userInput === "ed davis" ||
-      userInput === "greg foster" ||
-      userInput === "sundiata gaines" ||
-      userInput ===  "rudy gay" ||
-      userInput ===  "juancho hernangomez" ||
-      userInput ===  "juan hernangomez" ||
-      userInput ===  "rodney hood" ||
-      userInput ===  "kris humphries" ||
-      userInput ===  "mark jackson" ||
-      userInput ===  "jon lucas iii" ||
-      userInput ===  "donyell marshall" ||
-      userInput ===  "tony massenburg" ||
-      userInput ===  "cj miles" ||
-      userInput ===  "greg monroe" ||
-      userInput ===  "jowan morgan" ||
-      userInput ===  "steve novak" ||
-      userInput ===  "don o'sullivan" ||
-      userInput ===  "milt palacio" ||
-      userInput ===  "aleksandar radojevic" ||
-      userInput ===  "matt thomas" ||
-      userInput ===  "aaron williams")
+      lowerCaseInput === "rafael araujo" || 
+      lowerCaseInput === "carlos arroyo" ||
+      lowerCaseInput === "demarre carroll" ||
+      lowerCaseInput === "keon clark" ||
+      lowerCaseInput === "tyrone corbin" ||
+      lowerCaseInput === "william cunningham" ||
+      lowerCaseInput === "dell curry" ||
+      lowerCaseInput === "ed davis" ||
+      lowerCaseInput === "greg foster" ||
+      lowerCaseInput === "sundiata gaines" ||
+      lowerCaseInput ===  "rudy gay" ||
+      lowerCaseInput ===  "juancho hernangomez" ||
+      lowerCaseInput ===  "juan hernangomez" ||
+      lowerCaseInput ===  "rodney hood" ||
+      lowerCaseInput ===  "kris humphries" ||
+      lowerCaseInput ===  "mark jackson" ||
+      lowerCaseInput ===  "jon lucas iii" ||
+      lowerCaseInput ===  "donyell marshall" ||
+      lowerCaseInput ===  "tony massenburg" ||
+      lowerCaseInput ===  "cj miles" ||
+      lowerCaseInput ===  "greg monroe" ||
+      lowerCaseInput ===  "jowan morgan" ||
+      lowerCaseInput ===  "steve novak" ||
+      lowerCaseInput ===  "don o'sullivan" ||
+      lowerCaseInput ===  "milt palacio" ||
+      lowerCaseInput ===  "aleksandar radojevic" ||
+      lowerCaseInput ===  "matt thomas" ||
+      lowerCaseInput ===  "aaron williams")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button11`);
@@ -488,11 +504,14 @@
 
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
       
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "khem birch" || 
-      userInput === "freddie gillespie")
+      lowerCaseInput === "khem birch" || 
+      lowerCaseInput === "freddie gillespie")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button12`);
@@ -513,100 +532,103 @@
 
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
       
 
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "alaa abdelnaby" || 
-      userInput === "james anderson" ||
-      userInput === "vincent askew" ||
-      userInput === "matt barnes" ||
-      userInput === "marco belinelli" ||
-      userInput === "john block" ||
-      userInput === "calvin booth" ||
-      userInput === "michael bradley" ||
-      userInput === "corey brewer" ||
-      userInput === "rodney buford" ||
-      userInput === "alec burks" ||
-      userInput === "bill calhoun" ||
-      userInput === "willie cauley-stein" ||
-      userInput === "willie cauley stein" ||
-      userInput === "len chappell" ||
-      userInput === "steve colter" ||
-      userInput === "seth curry" ||
-      userInput === "samuel dalembert" ||
-      userInput === "lloyd daniels" ||
-      userInput === "dewayne dedmon" ||
-      userInput === "connie dierking" ||
-      userInput === "ken durrett" ||
-      userInput === "franklin edwards" ||
-      userInput === "reggie evans" ||
-      userInput === "fred foster" ||
-      userInput === "dave gambee" ||
-      userInput === "jeff grayer" ||
-      userInput === "johnny green" ||
-      userInput === "matt guokas" ||
-      userInput === "alex hannum" ||
-      userInput === "spencer hawes" ||
-      userInput === "mark hendrickson" ||
-      userInput === "fred hetzel" ||
-      userInput === "art heyman" ||
-      userInput === "george hill" ||
-      userInput === "justin holiday" ||
-      userInput === "richaun holmes" ||
-      userInput === "darrall imhoff" ||
-      userInput === "jim jackson" ||
-      userInput === "ollie johnson" ||
-      userInput === "reggie johnson" ||
-      userInput === "jake jones" ||
-      userInput === "tony kimball" ||
-      userInput === "george king" ||
-      userInput === "louis king" ||
-      userInput === "carl landry" ||
-      userInput === "eric leckner" ||
-      userInput === "andrew levane" ||
-      userInput === "art long" ||
-      userInput === "al masino" ||
-      userInput === "tony massenburg" ||
-      userInput === "vernon maxwell" ||
-      userInput === "don may" ||
-      userInput === "luc richard mbah a moute" ||
-      userInput === "luc mbah a moute" ||
-      userInput === "javale mcgee" ||
-      userInput === "mark mcnamara" ||
-      userInput === "andre miller" ||
-      userInput === "andres nocioni" ||
-      userInput === "mike novak" ||
-      userInput === "kevin ollie" ||
-      userInput === "billy owens" ||
-      userInput === "norvel pelle" ||
-      userInput === "filip petrusev" ||
-      userInput === "ed pinckney" ||
-      userInput === "luther rackley" ||
-      userInput === "marlon redmond" ||
-      userInput === "cliff robinson" ||
-      userInput === "glen robinson iii" ||
-      userInput === "thomas robinson" ||
-      userInput === "sergio rodriguez"||
-      userInput === "john salmons" ||
-      userInput === "jakarr sampson" ||
-      userInput === "connie simmons" ||
-      userInput === "brian skinner" ||
-      userInput === "derek smith" ||
-      userInput === "jabari smith" ||
-      userInput === "darius songaila" ||
-      userInput === "nik stauskas," ||
-      userInput === "greg stokes" ||
-      userInput === "kenny thomas" ||
-      userInput === "lasalle thompson" ||
-      userInput === "anthony tolliver" ||
-      userInput === "tom van arsdale" ||
-      userInput === "chris webber" ||
-      userInput === "walt wesley" ||
-      userInput === "corliss williamson" ||
-      userInput === "george wilson" ||
-      userInput === "trevor wilson" ||
-      userInput === "leon wood"
+      lowerCaseInput === "alaa abdelnaby" || 
+      lowerCaseInput === "james anderson" ||
+      lowerCaseInput === "vincent askew" ||
+      lowerCaseInput === "matt barnes" ||
+      lowerCaseInput === "marco belinelli" ||
+      lowerCaseInput === "john block" ||
+      lowerCaseInput === "calvin booth" ||
+      lowerCaseInput === "michael bradley" ||
+      lowerCaseInput === "corey brewer" ||
+      lowerCaseInput === "rodney buford" ||
+      lowerCaseInput === "alec burks" ||
+      lowerCaseInput === "bill calhoun" ||
+      lowerCaseInput === "willie cauley-stein" ||
+      lowerCaseInput === "willie cauley stein" ||
+      lowerCaseInput === "len chappell" ||
+      lowerCaseInput === "steve colter" ||
+      lowerCaseInput === "seth curry" ||
+      lowerCaseInput === "samuel dalembert" ||
+      lowerCaseInput === "lloyd daniels" ||
+      lowerCaseInput === "dewayne dedmon" ||
+      lowerCaseInput === "connie dierking" ||
+      lowerCaseInput === "ken durrett" ||
+      lowerCaseInput === "franklin edwards" ||
+      lowerCaseInput === "reggie evans" ||
+      lowerCaseInput === "fred foster" ||
+      lowerCaseInput === "dave gambee" ||
+      lowerCaseInput === "jeff grayer" ||
+      lowerCaseInput === "johnny green" ||
+      lowerCaseInput === "matt guokas" ||
+      lowerCaseInput === "alex hannum" ||
+      lowerCaseInput === "spencer hawes" ||
+      lowerCaseInput === "mark hendrickson" ||
+      lowerCaseInput === "fred hetzel" ||
+      lowerCaseInput === "art heyman" ||
+      lowerCaseInput === "george hill" ||
+      lowerCaseInput === "justin holiday" ||
+      lowerCaseInput === "richaun holmes" ||
+      lowerCaseInput === "darrall imhoff" ||
+      lowerCaseInput === "jim jackson" ||
+      lowerCaseInput === "ollie johnson" ||
+      lowerCaseInput === "reggie johnson" ||
+      lowerCaseInput === "jake jones" ||
+      lowerCaseInput === "tony kimball" ||
+      lowerCaseInput === "george king" ||
+      lowerCaseInput === "louis king" ||
+      lowerCaseInput === "carl landry" ||
+      lowerCaseInput === "eric leckner" ||
+      lowerCaseInput === "andrew levane" ||
+      lowerCaseInput === "art long" ||
+      lowerCaseInput === "al masino" ||
+      lowerCaseInput === "tony massenburg" ||
+      lowerCaseInput === "vernon maxwell" ||
+      lowerCaseInput === "don may" ||
+      lowerCaseInput === "luc richard mbah a moute" ||
+      lowerCaseInput === "luc mbah a moute" ||
+      lowerCaseInput === "javale mcgee" ||
+      lowerCaseInput === "mark mcnamara" ||
+      lowerCaseInput === "andre miller" ||
+      lowerCaseInput === "andres nocioni" ||
+      lowerCaseInput === "mike novak" ||
+      lowerCaseInput === "kevin ollie" ||
+      lowerCaseInput === "billy owens" ||
+      lowerCaseInput === "norvel pelle" ||
+      lowerCaseInput === "filip petrusev" ||
+      lowerCaseInput === "ed pinckney" ||
+      lowerCaseInput === "luther rackley" ||
+      lowerCaseInput === "marlon redmond" ||
+      lowerCaseInput === "cliff robinson" ||
+      lowerCaseInput === "glen robinson iii" ||
+      lowerCaseInput === "thomas robinson" ||
+      lowerCaseInput === "sergio rodriguez"||
+      lowerCaseInput === "john salmons" ||
+      lowerCaseInput === "jakarr sampson" ||
+      lowerCaseInput === "connie simmons" ||
+      lowerCaseInput === "brian skinner" ||
+      lowerCaseInput === "derek smith" ||
+      lowerCaseInput === "jabari smith" ||
+      lowerCaseInput === "darius songaila" ||
+      lowerCaseInput === "nik stauskas," ||
+      lowerCaseInput === "greg stokes" ||
+      lowerCaseInput === "kenny thomas" ||
+      lowerCaseInput === "lasalle thompson" ||
+      lowerCaseInput === "anthony tolliver" ||
+      lowerCaseInput === "tom van arsdale" ||
+      lowerCaseInput === "chris webber" ||
+      lowerCaseInput === "walt wesley" ||
+      lowerCaseInput === "corliss williamson" ||
+      lowerCaseInput === "george wilson" ||
+      lowerCaseInput === "trevor wilson" ||
+      lowerCaseInput === "leon wood"
       )
 
       // Get the corresponding button element
@@ -629,49 +651,52 @@
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
+
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "rick adelman" || 
-      userInput === "ron behagen" ||
-      userInput === "john block" ||
-      userInput === "ron boone" ||
-      userInput === "alec burks" ||
-      userInput === "antoine carr" ||
-      userInput === "pete chilcutt" ||
-      userInput === "keon clark" ||
-      userInput === "jack cooley" ||
-      userInput === "tyrone corbin" ||
-      userInput === "jerry eaves" ||
-      userInput === "rudy gay" ||
-      userInput === "bob hansen" ||
-      userInput === "jason hart" ||
-      userInput === "george hill" ||
-      userInput === "henry james" ||
-      userInput === "ollie johnson" ||
-      userInput === "damian jones" ||
-      userInput === "rich kelly" ||
-      userInput === "toby kimball" ||
-      userInput === "kostas koufos" ||
-      userInput === "eric leckner" ||
-      userInput === "jim les" ||
-      userInput === "trey lyles" ||
-      userInput === "tony massenburg" ||
-      userInput === "billy mckinney" ||
-      userInput === "joe meriweather" ||
-      userInput ===  "mikki moore" ||
-      userInput ===  "otto moore" ||
-      userInput ===  "emmanuel mudiay" ||
-      userInput ===  "kenny natt" ||
-      userInput ===  "louie nelson" ||
-      userInput ===  "greg ostertag" ||
-      userInput ===  "norvel pelle" ||
-      userInput ===  "olden polynice" ||
-      userInput ===  "ronnie price" ||
-      userInput ===  "rick roberson" ||
-      userInput ===  "bob robinzine" ||
-      userInput ===  "david stockton" ||
-      userInput ===  "hassan whiteside" ||
-      userInput ===  "nate williams")
+      lowerCaseInput === "rick adelman" || 
+      lowerCaseInput === "ron behagen" ||
+      lowerCaseInput === "john block" ||
+      lowerCaseInput === "ron boone" ||
+      lowerCaseInput === "alec burks" ||
+      lowerCaseInput === "antoine carr" ||
+      lowerCaseInput === "pete chilcutt" ||
+      lowerCaseInput === "keon clark" ||
+      lowerCaseInput === "jack cooley" ||
+      lowerCaseInput === "tyrone corbin" ||
+      lowerCaseInput === "jerry eaves" ||
+      lowerCaseInput === "rudy gay" ||
+      lowerCaseInput === "bob hansen" ||
+      lowerCaseInput === "jason hart" ||
+      lowerCaseInput === "george hill" ||
+      lowerCaseInput === "henry james" ||
+      lowerCaseInput === "ollie johnson" ||
+      lowerCaseInput === "damian jones" ||
+      lowerCaseInput === "rich kelly" ||
+      lowerCaseInput === "toby kimball" ||
+      lowerCaseInput === "kostas koufos" ||
+      lowerCaseInput === "eric leckner" ||
+      lowerCaseInput === "jim les" ||
+      lowerCaseInput === "trey lyles" ||
+      lowerCaseInput === "tony massenburg" ||
+      lowerCaseInput === "billy mckinney" ||
+      lowerCaseInput === "joe meriweather" ||
+      lowerCaseInput ===  "mikki moore" ||
+      lowerCaseInput ===  "otto moore" ||
+      lowerCaseInput ===  "emmanuel mudiay" ||
+      lowerCaseInput ===  "kenny natt" ||
+      lowerCaseInput ===  "louie nelson" ||
+      lowerCaseInput ===  "greg ostertag" ||
+      lowerCaseInput ===  "norvel pelle" ||
+      lowerCaseInput ===  "olden polynice" ||
+      lowerCaseInput ===  "ronnie price" ||
+      lowerCaseInput ===  "rick roberson" ||
+      lowerCaseInput ===  "bob robinzine" ||
+      lowerCaseInput ===  "david stockton" ||
+      lowerCaseInput ===  "hassan whiteside" ||
+      lowerCaseInput ===  "nate williams")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button15`);
@@ -692,39 +717,42 @@
 
       // Display a window prompt to get user input
       const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+
+      // Convert to lowercase
+      lowerCaseInput = userInput.toLowerCase();
       
 
       // Check if the input satisfies the condition for the button
       const isValidInput = buttonConditions && (
-      userInput === "tariq abdul-wahad" || 
-      userInput === "aaron afflalo" ||
-      userInput === "nick anderson" ||
-      userInput === "trevor ariza" ||
-      userInput === "matt barnes" ||
-      userInput === "anthony bonner" ||
-      userInput ===  "michael bradley" ||
-      userInput ===  "vince carter" ||
-      userInput ===  "doug christie" ||
-      userInput ===  "dewayne dedmon" ||
-      userInput ===  "maurice harkless" ||
-      userInput ===  "anthony johnson" ||
-      userInput ===  "bj johnson" ||
-      userInput ===  "greg kite" ||
-      userInput === "frank mason" ||
-      userInput === "vernon maxwell" ||
-      userInput === "mark mcnamara" ||
-      userInput === "cuttino mobley" ||
-      userInput ===  "jawann oldham" ||
-      userInput ===  "kevin ollie" ||
-      userInput ===  "ronnie price" ||
-      userInput ===  "kenny smith" ||
-      userInput ===  "reggie theus" ||
-      userInput ===  "carl thomas" ||
-      userInput ===  "stephen thompson" ||
-      userInput ===  "hedo turkloglu" ||
-      userInput ===  "beno udrih" ||
-      userInput ===  "spud webb" ||
-      userInput ===  "jason williams")
+      lowerCaseInput === "tariq abdul-wahad" || 
+      lowerCaseInput === "aaron afflalo" ||
+      lowerCaseInput === "nick anderson" ||
+      lowerCaseInput === "trevor ariza" ||
+      lowerCaseInput === "matt barnes" ||
+      lowerCaseInput === "anthony bonner" ||
+      lowerCaseInput ===  "michael bradley" ||
+      lowerCaseInput ===  "vince carter" ||
+      lowerCaseInput ===  "doug christie" ||
+      lowerCaseInput ===  "dewayne dedmon" ||
+      lowerCaseInput ===  "maurice harkless" ||
+      lowerCaseInput ===  "anthony johnson" ||
+      lowerCaseInput ===  "bj johnson" ||
+      lowerCaseInput ===  "greg kite" ||
+      lowerCaseInput === "frank mason" ||
+      lowerCaseInput === "vernon maxwell" ||
+      lowerCaseInput === "mark mcnamara" ||
+      lowerCaseInput === "cuttino mobley" ||
+      lowerCaseInput ===  "jawann oldham" ||
+      lowerCaseInput ===  "kevin ollie" ||
+      lowerCaseInput ===  "ronnie price" ||
+      lowerCaseInput ===  "kenny smith" ||
+      lowerCaseInput ===  "reggie theus" ||
+      lowerCaseInput ===  "carl thomas" ||
+      lowerCaseInput ===  "stephen thompson" ||
+      lowerCaseInput ===  "hedo turkloglu" ||
+      lowerCaseInput ===  "beno udrih" ||
+      lowerCaseInput ===  "spud webb" ||
+      lowerCaseInput ===  "jason williams")
 
       // Get the corresponding button element
       const buttonElement = document.querySelector(`.button16`);

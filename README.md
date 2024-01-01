@@ -19,7 +19,7 @@ You get nine guesses to fill a 3x3 grid with professional basketball athletes.
 
 Challenge yourself and test your knowledge of the players in the league.
 
-Compete with friends and fellow fans to see who can create the most immaculate grid.
+Compete with friends and fellow fans to see who can create the best immaculate grid.
 
 
 # Trivia

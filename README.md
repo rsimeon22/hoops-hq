@@ -41,6 +41,9 @@ Highlights:
  - See real-time results to discover what the basketball community thinks.
  - Share your thoughts and discuss poll results with other fans.
 
+# Schedule
+ - Previous Day/Next Day has no function, just there for a visual
+
 
 # Pick 'Em
 

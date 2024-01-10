@@ -45,7 +45,7 @@
           </li>
           <li><a href="leaders.html">League Leaders</a></li>
           <li><a href="schedule.html">Daily Schedule</a></li>
-          <li><a href="casino.html">Pick 'Em!</a></li>
+          <li><a href="404.html">Pick 'Em!</a></li>
           <li><a href="contact.html">Contact Me</a></li>
         </ul>
       </div>
@@ -109,6 +109,16 @@
       background-color: green;
       color: white;
     }
+
+
+    #playerSearchContainer {
+      display: none;
+      border: 1px solid #ccc;
+      max-height: 150px;
+      overflow-y: auto;
+      position: absolute;
+      width: 100%;
+    }
 </style>
 
 <!--the grid.-->
@@ -121,8 +131,8 @@
     <button class="button3"><img src="immaculate-grid/jazz-ig.png" height="60px" width="80px" alt="3png"></button>
     <button class="button4"><img src="immaculate-grid/magic-ig.png" height="60px" width="80px" alt="4png"></button>
     <button class="button5"><img src="immaculate-grid/wizards-ig.png" height="60px" width="80px" alt="5png"></button>
-    <button class="button6" onclick="checkInput1()"></button>
-    <button class="button7" onclick="checkInput2()"></button>
+    <button class="button6" onclick="showSearchBar1()"></button>
+    <button class="button7" onclick="showSearchBar2()"></button>
     <button class="button8" onclick="checkInput3()"></button>
     <button class="button9"><img src="immaculate-grid/raptors-ig.png" height="60px" width="80px" alt="9png"></button>
     <button class="button10" onclick="checkInput4()"></button>
@@ -134,10 +144,69 @@
     <button class="button16" onclick="checkInput9()"></button>
   </div>
 
+  <input type="text" id="playerSearch" oninput="searchOptions()" onclick="showSearchBar1()">
+  <div id="playerSearchContainer1" onclick="hideSearchBar1()"></div>
+  <button onclick="checkInput1()">Check Input</button>
+
+  <input type="text" id="playerSearch2" oninput="searchOptions2()" onclick="showSearchBar2()">
+  <div id="playerSearchContainer2" onclick="hideSearchBar2()"></div>
+  <button onclick="checkInput2()">Check Input</button>
 
 <!--js for the grid.-->
 <script>
-  //const correctValues = ['ron anderson', 'isaac austin', 'manute bol', 'trevor booker', 'calvin booth', 'damone brown', 'kwame brown', 'trey burke', 'barney cable', 'fred carter', 'terry catledge', 'archie clark', 'steve colter', 'mel counts', 'michael curry', 'antonio daniels', 'leroy ellis', 'tim frazier', 'joe graboski', 'greg grant', 'harvey grant', 'johnny green', 'kenny green', 'montrezl harrell', 'danuel house jr', 'dwight howard', 'bailey howell', 'larry hughes', 'jaren jackson', 'george johnson', 'charles jones', 'wali jones', 'red kerr', 'albert king', 'manny leaks', 'kevin loughery', 'don maclean', 'shelvin mack', 'rick mahorn', 'jeff malone', 'moses malone', 'wes matthews', 'eric maynor', 'jaVale mcgee', 'jodie meeks', 'andre miller', 'greg monroe', 'perry moss', 'mike muscala', 'raul neto', 'brian oliver', 'kelly oubre jr', 'doug overton', 'kevin pritchard', 'chasson randle', 'cliff robinson', 'michael ruffin', 'jeff ruland', 'mike scott', 'landry shamet', 'scott skiles', 'ish smith', 'jason smith', 'darius songaila', 'jerry stackhouse', 'bob thornton', 'andre turner', 'jay vincent', 'ben warley', 'chris webber', 'bob weiss', 'walt wesley', 'david wingate', 'leon wood', 'nick young']
+   
+  const options = [
+    "kwame brown",
+    "Option 2",
+    "Option 3",
+    "Option 4",
+    // Add more options as needed
+  ];
+
+  document.getElementById("playerSearchContainer1").style.display = "none";
+        
+  function showSearchBar1() {
+    // Display the search bar container
+    document.getElementById("playerSearchContainer1").style.display = "block";
+    searchOptions(); // Update options when the search bar is clicked
+  }
+
+  function hideSearchBar1() {
+    // Hide the search bar container when an option is selected or when clicking outside
+    document.getElementById("playerSearchContainer1").style.display = "none";
+  }
+
+  function selectOption(selectedOption) {
+    // Set the selected option in the input field
+    document.getElementById("playerSearch1").value = selectedOption;
+    hideSearchBar1(); // Hide the search bar after selecting an option
+  }
+
+  function searchOptions() {
+    const searchInput = document.getElementById("playerSearch1");
+    const searchResults = document.getElementById("playerSearchContainer1");
+    const query = searchInput.value.toLowerCase();
+
+    // Filter options based on the query
+    const filteredOptions = options.filter(option =>
+      option.toLowerCase().includes(query)
+    );
+
+    // Display the filtered options
+    displayOptions(filteredOptions, searchResults);
+  }
+
+  function displayOptions(filteredOptions, searchResults) {
+    const optionsHTML = filteredOptions.map(option =>
+      `<div onclick="selectOption('${option}')">${option}</div>`
+    ).join('');
+
+    // Update the search results
+    searchResults.innerHTML = optionsHTML;
+
+    // Show or hide the search results based on the number of options
+    searchResults.style.display = filteredOptions.length > 0 ? 'block' : 'none';
+  }
 
   function checkInput1() {
     // Get the condition for the specified button
@@ -145,11 +214,12 @@
       6: true,   // Button 6
     };
 
-    // Display a window prompt to get user input
-    const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
+    // Get user input from the search bar
+    const userInputValue = document.getElementById("playerSearch1").value;
 
     // Convert to lowercase
-    lowerCaseInput = userInput.toLowerCase();
+    const lowerCaseInput = userInputValue.toLowerCase();
+
 
     // Check if the input satisfies the condition for the button
     const isValidInput = buttonConditions && (
@@ -235,9 +305,66 @@
     // Update the button's style based on the validation result
     if (isValidInput) {
       buttonElement.classList.add("green");
+      hideSearchBar1();
     } else {
       alert("Invalid input. Try again."); // You can customize this message
+      hideSearchBar1();
     }
+  }
+</script>
+
+<script>
+  const options2 = [
+    "kwame brown",
+    "trevor bvooker",
+    "Option 3",
+    "Option 4",
+    // Add more options as needed
+  ];
+
+  document.getElementById("playerSearchContainer2").style.display = "none";
+        
+  function showSearchBar2() {
+    // Display the search bar container
+    document.getElementById("playerSearchContainer2").style.display = "block";
+    searchOptions(); // Update options when the search bar is clicked
+  }
+
+  function hideSearchBar2() {
+    // Hide the search bar container when an option is selected or when clicking outside
+    document.getElementById("playerSearchContainer2").style.display = "none";
+  }
+
+  function selectOption(selectedOption) {
+    // Set the selected option in the input field
+    document.getElementById("playerSearch2").value = selectedOption;
+    hideSearchBar2(); // Hide the search bar after selecting an option
+  }
+
+  function searchOptions() {
+    const searchInput = document.getElementById("playerSearch2");
+    const searchResults = document.getElementById("playerSearchContainer2");
+    const query = searchInput.value.toLowerCase();
+
+    // Filter options based on the query
+    const filteredOptions2 = options2.filter(option =>
+      option.toLowerCase().includes(query)
+    );
+
+    // Display the filtered options
+    displayOptions(filteredOptions, searchResults);
+  }
+
+  function displayOptions(filteredOptions2, searchResults) {
+    const options2HTML = filteredOptions2.map(option =>
+      `<div onclick="selectOption('${option}')">${option}</div>`
+    ).join('');
+
+    // Update the search results
+    searchResults.innerHTML = options2HTML;
+
+    // Show or hide the search results based on the number of options
+    searchResults.style.display = filteredOptions2.length > 0 ? 'block' : 'none';
   }
 
   function checkInput2() {
@@ -245,9 +372,6 @@
     const buttonConditions = {
         7: true,   // Button 7
       };
-
-      // Display a window prompt to get user input
-      const userInput = prompt("Enter the player's name (FULL NAME PLEASE!):");
 
       // Convert to lowercase
       lowerCaseInput = userInput.toLowerCase();
@@ -303,10 +427,16 @@
       // Update the button's style based on the validation result
       if (isValidInput) {
         buttonElement.classList.add("green");
+        hideSearchBar2();
       } else {
         alert("Invalid input. Try again."); // You can customize this message
+        hideSearchBar2();
       }
     }
+
+
+
+
 
   function checkInput3() {
     // Get the condition for the specified button

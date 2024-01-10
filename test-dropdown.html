@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Player</title>
+  <style>
+    /* Add your styles as needed */
+    .green {
+      background-color: green;
+      color: white;
+    }
+
+    /* Hide the search bar initially */
+    #playerSearchContainer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button to show the search bar -->
+  <button onclick="showSearchBar()">Show Search Bar</button>
+
+  <!-- Search bar container -->
+  <div id="playerSearchContainer">
+    <input type="text" id="playerSearch" placeholder="Enter the player's name (FULL NAME PLEASE!)">
+    <button onclick="checkInput2()">Check Player</button>
+  </div>
+
+  <script>
+    function showSearchBar() {
+      // Display the search bar container
+      document.getElementById("playerSearchContainer").style.display = "block";
+    }
+
+    function checkInput2() {
+      // Get the condition for the specified button
+      const buttonConditions = {
+        7: true,   // Button 7
+      };
+
+      // Get user input from the search bar
+      const userInput = document.getElementById("playerSearch").value;
+
+      // Convert to lowercase
+      const lowerCaseInput = userInput.toLowerCase();
+
+      // Check if the input satisfies the condition for the button
+      const isValidInput = buttonConditions && (
+        lowerCaseInput === "morris almond" ||
+        lowerCaseInput === "isaac austin" ||
+        // ... (add all other names)
+        lowerCaseInput === "freeman williams"
+      );
+
+      // Get the corresponding button element
+      const buttonElement = document.querySelector('.button7');
+
+      // Update the button's style based on the validation result
+      if (isValidInput) {
+        buttonElement.classList.add("green");
+      } else {
+        alert("Invalid input. Try again."); // You can customize this message
+      }
+    }
+  </script>
+
+</body>
+</html>
+

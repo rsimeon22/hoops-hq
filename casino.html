@@ -65,7 +65,8 @@
             font-family: 'Allerta',Helvetica,Arial,sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding-top: 600px;
+            padding-bottom: 900px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -79,9 +80,11 @@
             border-radius: 5px;
             margin-bottom: 20px;
             padding: 20px;
-            width: 80%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 1000px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
         }
 
         .bet-form {
@@ -102,48 +105,151 @@
             border-radius: 3px;
             cursor: pointer;
         }
+        .bet-type {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .betting-slip {
+            grid-column: span 3;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
 </style>
 
-<br>
-<br>
-<br>
 
 <!--main interface-->
 <body>
-    <div class="game">
-        <h2>Game 1</h2>
-        <div class="bet-form">
-            <label for="betAmount1">Enter your bet amount:</label>
-            <input type="number" id="betAmount1" class="bet-input" />
-            <button onclick="placeBet(1)" class="bet-button">Place Bet</button>
-        </div>
+  <div class="game">
+    <div class="bet-type">
+      <h2>Golden State Warriors</h2>
+      <p>Spread: +5</p>
+      <p>Moneyline: +184</p>
+      <p>Over: 229.5</p>
+      <input type="number" id="awaySpread1" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Warriors Spread', '+5', 'awaySpread1')">Add Spread</button>
+      
+      <input type="number" id="awayMoneyline1" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Warriors Moneyline', '+184', 'awayMoneyline1')">Add Moneyline</button>
+
+      <input type="number" id="over1" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Over', '229.5', 'over1')">Add Over</button>
     </div>
+    <div class="bet-type">
+      <h2>Los Angeles Clippers</h2>
+      <p>Spread: -5</p>
+      <p>Moneyline: -220</p>
+      <p>Under: 229.5</p>
+      <input type="number" id="homeSpread1" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Clippers Spread', '-5', 'homeSpread1')">Add Spread</button>
+      
+      <input type="number" id="homeMoneyline1" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Clippers Moneyline', '-220', 'homeMoneyline1')">Add Moneyline</button>
 
-    <div class="game">
-        <h2>Game 2</h2>
-        <div class="bet-form">
-            <label for="betAmount2">Enter your bet amount:</label>
-            <input type="number" id="betAmount2" class="bet-input" />
-            <button onclick="placeBet(2)" class="bet-button">Place Bet</button>
-        </div>
+      <input type="number" id="under1" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Under', '229.5', 'under1')">Add Under</button>
     </div>
+  </div>
 
-    <h2>Your Bets</h2>
-    <ul id="userBets">
-      <!-- Display user's bets dynamically using JavaScript -->
-    </ul>
+  <div class="game">
+    <div class="bet-type">
+      <h2>Minnesota Timberwolves</h2>
+      <p>Spread: -5</p>
+      <p>Moneyline: -196</p>
+      <p>Over: 220.5</p>
+      <input type="number" id="awaySpread2" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Timberwolves Spread', '-5', 'awaySpread2')">Add Spread</button>
+      
+      <input type="number" id="awayMoneyline2" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Timberwolves Moneyline', '-196', 'awayMoneyline2')">Add Moneyline</button>
 
-    <!-- Repeat the above structure for the other games -->
+      <input type="number" id="over2" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Over', '220.5', 'over2')">Add Over</button>
+    </div>
+    <div class="bet-type">
+      <h2>Charlotte Hornets</h2>
+      <p>Spread: +5</p>
+      <p>Moneyline: +164</p>
+      <p>Under: 220.5</p>
+      <input type="number" id="homeSpread2" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Hornets Spread', '+5', 'homeSpread2')">Add Spread</button>
+      
+      <input type="number" id="homeMoneyline2" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Hornets Moneyline', '+164', 'homeMoneyline2')">Add Moneyline</button>
+
+      <input type="number" id="under2" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Under', '220.5', 'under2')">Add Under</button>
+    </div>
+  </div>
+
+  <div class="game">
+    <div class="bet-type">
+      <h2>Orlando Magic</h2>
+      <p>Spread: +2.5</p>
+      <p>Moneyline: +122</p>
+      <p>Over: 225.5</p>
+      <input type="number" id="awaySpread3" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Magic Spread', '+2.5', 'awaySpread3')">Add Spread</button>
+      
+      <input type="number" id="awayMoneyline3" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Magic Moneyline', '+122', 'awayMoneyline3')">Add Moneyline</button>
+
+      <input type="number" id="over3" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Over', '225.5', 'over3')">Add Over</button>
+    </div>
+    <div class="bet-type">
+      <h2>Brooklyn Nets</h2>
+      <p>Spread: -2.5</p>
+      <p>Moneyline: -144</p>
+      <p>Under: 225.5</p>
+      <input type="number" id="homeSpread3" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Nets Spread', '-2.5', 'homeSpread3')">Add Spread</button>
+      
+      <input type="number" id="homeMoneyline3" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Nets Moneyline', '-144', 'homeMoneyline3')">Add Moneyline</button>
+
+      <input type="number" id="under3" placeholder="Enter Wager Amount">
+      <button onclick="addToBettingSlip('Under', '225.5', 'under3')">Add Under</button>
+    </div>
+  </div>
 </body>
 
-<!--js for wager display-->
-    <script>
-        function placeBet(gameNumber) {
-            // Add logic to handle the bet placement
-            // You would typically communicate with a backend server to process the bet
-            alert("Bet placed on Game " + gameNumber);
+  <div id="betting-slip"></div>
+  <button id="place-bet" onclick="placeBet()">Place Bet</button>
+  <button id="cancel-bet" onclick="cancelBet()">Cancel Bet</button>
+
+  <script>
+      function addToBettingSlip(betType, value, inputId) {
+          const bettingSlip = document.getElementById('betting-slip');
+          const listItem = document.createElement('li');
+          const wagerAmount = document.getElementById(inputId).value;
+          if (wagerAmount.trim() === "") {
+              alert("Please enter a valid wager amount.");
+              return;
+          }
+          listItem.textContent = `${betType}: ${value} - Wager: ${wagerAmount} coins`;
+          bettingSlip.appendChild(listItem);
+      }
+
+      function placeBet() {
+            // Implement logic to handle placing the bet
+            alert("Bet placed successfully!");
+            clearBettingSlip();
         }
-    </script>
+
+      function cancelBet() {
+          // Implement logic to handle canceling the bet
+          clearBettingSlip();
+      }
+
+      function clearBettingSlip() {
+          const bettingSlip = document.getElementById('betting-slip');
+          bettingSlip.innerHTML = "";
+      }
+  </script>
+</body>
 
 <!--animations-->
 <script src="assets/js/jquery.min.js"></script> 

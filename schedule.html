@@ -90,7 +90,7 @@
     }
 
     .game-card {
-        width: 80%;
+        width: 100%;
         background-color: #fff;
         margin-bottom: 20px;
         padding: 15px;
@@ -98,6 +98,18 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         font-family: 'Allerta',Helvetica,Arial,sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-logos {
+      display: flex;
+      align-items: center;
+    }
+
+    .vs {
+      margin: 0 10px;
     }
 
     .date-navigation {
@@ -136,99 +148,147 @@
 <!--schedule for the day-->
 <body>
     <div class="games-container">
-        <div class="game-card" style="font-family: 'Allerta',Helvetica,Arial,sans-serif;">
-            <h2>Golden State Warriors (9-10) @ Los Angeles Clippers (8-10)</h2>
-            <p>Game Time: 7:00 PM</p>
-            <p>*the spread goes here*</p>
+      <div class="game-card">
+        <div class="team-logos">
+          <img src="nba-logos/nba-golden-state-warriors-logo-2020-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-la-clippers-logo-300x300.png" alt="Image">
         </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Crypto.com Arena</p>
+      </div>
     </div>
 
     <div class="games-container">
-        <div class="game-card">
-            <h2>Minnesota Timberwolves (14-4) @ Charlotte Hornets (6-11)</h2>
-            <p>Game Time: 7:00 PM</p>
-            <p>*the spread goes here*</p>
+      <div class="game-card">
+        <div class="team-logos">
+          <img src="nba-logos/cleveland-cavaliers-2010-2017-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-detroit-pistons-logo-300x300.png" alt="Image">
         </div>
-    </div>
-
-    <div class="games-container">
-      <div class="game-card">
-          <h2>Cleveland Cavaliers (10-9) @ Detriot Pistons (2-17)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
-      </div>
-  </div>
-
-    <div class="games-container">
-      <div class="game-card">
-          <h2>Orlando Magic (14-5) @ Charlotte Hornets (9-9)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
-      </div>
-    </div>
-
-
-    <div class="games-container">
-      <div class="game-card">
-          <h2>Atlanta Hawks (9-9) @ Milwaukee Bucks (14-5)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <p>Game Time: 7:00 PM</p>
+        <p>Little Caesers Arena</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>New Orleans Pelicans (11-9) @ Chicago Bulls (6-14)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/nba-orlando-magic-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-brooklyn-nets-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Barclays Center</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>Indiana Pacers (9-8) @ Miami Heat (11-8)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/nba-minnesota-timberwolves-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-charlotte-hornets-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Spectrum Center</p>
+      </div>
+    </div>
+
+
+    <div class="games-container">
+      <div class="game-card">
+        <div class="team-logos">
+          <img src="nba-logos/nba-atlanta-hawks-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-milwaukee-bucks-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Fiserv Forum</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>Memphis Grizzlies (5-13) @ Phoenix Suns (11-8)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/nba-new-orleans-pelicans-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-chicago-bulls-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>United Arena</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>Oklahoma City Thunder (12-6) @ Dallas Mavericks (11-7)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/nba-indiana-pacers-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-miami-heat-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Kaseya Center</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>Portland Trail Blazers (6-12) @ Utah Jazz (6-13)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/nba-memphis-grizzlies-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/phoenix-suns-logo-symbol-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Footprint Center</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>Denver Nuggets (14-6) @ Sacramento Kings (10-7)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/nba-oklahoma-city-thunder-logo-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-dallas-mavericks-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>American Airlines Center</p>
       </div>
     </div>
 
     <div class="games-container">
       <div class="game-card">
-          <h2>Houston Rockets (8-8) @ Los Angeles Lakers (11-9)</h2>
-          <p>Game Time: 7:00 PM</p>
-          <p>*the spread goes here*</p>
+        <div class="team-logos">
+          <img src="nba-logos/portland-trail-blazers-logo-symbol-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/utah-jazz-logo-2022-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Vivint Smart Home Arena</p>
+      </div>
+    </div>
+
+    <div class="games-container">
+      <div class="game-card">
+        <div class="team-logos">
+          <img src="nba-logos/nba-denver-nuggets-logo-2018-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-sacramento-kings-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Golden 1 Center</p>
+      </div>
+    </div>
+
+    <div class="games-container">
+      <div class="game-card">
+        <div class="team-logos">
+          <img src="nba-logos/nba-houston-rockets-logo-2020-300x300.png" alt="Image">
+          <span class="vs"><span>@</span></span>
+          <img src="nba-logos/nba-los-angeles-lakers-logo-300x300.png" alt="Image">
+        </div>
+        <p>Game Time: 7:00 PM</p>
+        <p>Crypto.com Arena</p>
       </div>
     </div>
 </body>

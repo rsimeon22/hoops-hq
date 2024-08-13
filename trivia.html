@@ -129,49 +129,55 @@
 <section id="content">
 <br>
 <br>
-<h1 style="text-align: center; font-family: 'Allerta',Helvetica,Arial,sans-serif';">Select the Difficulty Below!</h1>
+
+<h1 style="text-align: center;">Select the Difficulty Below!</h1>
+
 <br>
 <br>
 <br>
 <br>
 <br>
-  <div id="button-list">
-    <a href="trivia-easy.html"><button type="button" id="button1">Easy</button>
-    <a href="trivia-intermediate.html"><button type="button" id="button2">Intermediate</button>
-    <a href="trivia-hard.html"><button type="button" id="button3">Hard</button>
-    <a href="trivia-ultimate-ball-knower.html"><button type="button" id="button4">Ultimate Ball Knower</button>
-  </div>
   
-  <style>
-  #button1 {
-    width: 334px;
-    height: 40px;
+<div id="button-list">
+  <a href="trivia-easy.html"><button type="button" id="button1">Easy</button>
+  <a href="trivia-intermediate.html"><button type="button" id="button2">Intermediate</button>
+  <a href="trivia-hard.html"><button type="button" id="button3">Hard</button>
+  <a href="trivia-ultimate-ball-knower.html"><button type="button" id="button4">Ultimate Ball Knower</button>
+</div>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #button-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+
+  #button-list a {
+    text-decoration: none;
+  }
+
+  button {
+    padding: 5px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
     background-color: #12a3df;
+    color: white;
+    cursor: pointer;
+    width: 300px;
   }
 
-  #button2{
-    width: 334px;
-    height: 40px;
-    background-color: #12a3df;
+  button:hover {
+    background-color: #4e87a0;
   }
-
-  #button3{
-    width: 334px;
-    height: 40px;
-    background-color: #12a3df;
-  }
-
-  #button4{
-    width: 334px;
-    height: 40px;
-    background-color: #12a3df;
-  }
-
-  #container{
-    text-align: center;
-    width: 50%;
-  }
-
   </style>
 </section>
 
